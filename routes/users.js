@@ -3,7 +3,9 @@ const router = express.Router();
 const userModel = require('../models/User');
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken')
+const dotenv = require('dotenv');
 
+dotenv.config()
 
 //OBETENER TODOS LOS USUARIOS
 router.get('/vertodoslosusuarios', async (req, res) => {
@@ -55,7 +57,7 @@ router.post('/login', async (req, res) => {
             const match = await bcrypt.compare(contraseña, contraseñaHash)
             if(match) {
                 const payload = {email: req.body.email, contraseña: contraseña}
-                const secret = "secret"
+                const secret = process.env.JWT_SECRET
                 const token = jwt.sign(payload, secret, { expiresIn: '1h'})
                 console.log(token);
 
