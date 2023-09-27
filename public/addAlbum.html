@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Crear álbum</title>
+    <style>
+        .sombra {
+            border: 1px solid rgb(124, 146, 212);
+            -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+            -moz-box-shadow: 0px 0px 12px -1px rgb(179, 184, 252);
+            box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 border-box">
+
+    <!--HEADER MOBILE-->
+
+     <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
+
+        <div class="flex justify-end">
+            <h2 class="text-white"></h2>
+            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+        </div>
+    
+        <div class="grid grid-cols-2 w-11/12">
+            <div class="flex items-center justify-center">
+                <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
+                <h1 class="text-white text-lg xl:text-base">album</h1>
+            </div>
+            <div class="flex items-center justify-center">
+                <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
+                <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--HEADER DESKTOP-->
+
+    <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-75 justify-between">
+
+            <div class="flex items-center justify-between">
+
+                <div class="justify-start flex">
+                    <button class="flex items-center justify-center me-7">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5">
+                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">album</span>
+                        </a>
+                    </button>
+                    
+                    <button class="flex items-center justify-center me-7">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
+                            <span class="text-indigo-600 underline text-lg xl:text-base hover:text-indigo-600 ">addAlbum</span>
+                        </a>
+                    </button>
+                    
+                    <button>
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login">
+                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">logIn</h1>
+                        </a>
+                    </button>
+                    
+                    <button>
+                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro">
+                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">resgistro</h1>
+                        </a>
+                    </button>
+                    <button>
+                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro">
+                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">tours</h1>
+                        </a>
+                    </button>
+                    
+                </div>
+
+                
+                <div>
+                    <div class="flex justify-end">
+                        <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
+                        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                    </div>
+                </div>                
+                
+            </div> 
+    </div>
+
+
+    <!--FORMULARIO-->
+
+    <div class="grid h-screen place-items-center p-4">
+
+        <div class="h-auto flex flex-col w-full md:w-10/12 lg:w-10/12 xl:w-10/12 2xl:w-9/12 2xl:mb-50 2xl:px-6 border-2 rounded-3xl border-pink pb-12 pt-8 px-10 mt-10 mb-20 sombra">
+
+            <div class="mb-4">
+                <h1 class="font-bold text-center md:text-start text-4xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Crear un álbum</h1>
+                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-xl font-bold">Ingresá toda la información y creá un álbum.</h1>
+            </div> 
+            <!-- action="https://formspree.io/f/xyyqebln" -->
+            <form id="formulario" class="md:grid md:grid-cols-2 gap-x-7" method="post">
+                <div>
+                    <div class="mb-3">
+                        <label class="text-slate-300 text-sm mt-3 mb-3" for="nombre">Titulo del Album</label>
+                        <input id="titulo" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="titulo" type="text" name="titulo" placeholder="Ingresá el título del álbum" required> 
+                    </div>     
+                    
+                    <div class="flex flex-col">
+                        <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="comentarioAlbum">Descripción del álbum</label>
+                        <textarea id="descripcion" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-14 placeholder:text-sm focus-visible:outline-none" id="comentarioAlbum" type="message" rows="10" cols="50" name="descripcion"
+                            placeholder="Ingresá el nombre completo del álbum" required> </textarea>
+                    </div>
+                        
+                        
+                    <!-- <div class="mb-3">
+                        <label class="text-slate-300 text-sm mt-3 mb-3" for="cantcancionesAlbum">Cantidad de canciones</label>
+                        <input class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" max="25" min="0" id="cantcancionesAlbum" type="number" name="cantcancionesAlbum" placeholder="Ingresá la cantidad de canciones del álbum" required> 
+                    </div> -->
+                        
+                </div>
+
+
+                <div>
+                    <div class="mb-3">
+                        <label class="text-slate-300 text-sm mt-3 mb-3" for="añoAlbum" for="">Año de lanzamiento</label>
+                        <select name="lanzamiento" id="lanzamiento" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="añoAlbum">
+                            <option value="">Seleccioná un año</option>
+                            <option value="1950">1950</option>
+                            <option value="1951">1951</option>
+                            <option value="1952">1952</option>
+                            <option value="1953">1953</option>
+                            <option value="1954">1954</option>
+                            <option value="1955">1955</option>
+                            <option value="1956">1956</option>
+                            <option value="1957">1957</option>
+                            <option value="1958">1958</option>
+                            <option value="1959">1959</option>
+                            <option value="1960">1960</option>
+                            <option value="1961">1961</option>
+                            <option value="1962">1962</option>
+                            <option value="1963">1963</option>
+                            <option value="1964">1964</option>
+                            <option value="1965">1965</option>
+                            <option value="1966">1966</option>
+                            <option value="1967">1967</option>
+                            <option value="1968">1968</option>
+                            <option value="1969">1969</option>
+                            <option value="1970">1970</option>
+                            <option value="1971">1971</option>
+                            <option value="1972">1972</option>
+                            <option value="1973">1973</option>
+                            <option value="1974">1974</option>
+                            <option value="1975">1975</option>
+                            <option value="1976">1976</option>
+                            <option value="1977">1977</option>
+                            <option value="1978">1978</option>
+                            <option value="1979">1979</option>
+                            <option value="1980">1980</option>
+                            <option value="1981">1981</option>
+                            <option value="1982">1982</option>
+                            <option value="1983">1983</option>
+                            <option value="1984">1984</option>
+                            <option value="1985">1985</option>
+                            <option value="1986">1986</option>
+                            <option value="1987">1987</option>
+                            <option value="1988">1988</option>
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                            <option value="1995">1995</option>
+                            <option value="1996">1996</option>
+                            <option value="1997">1997</option>
+                            <option value="1998">1998</option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+
+                    <!-- <div class="mb-4">
+                        <label class="text-slate-300 text-sm mt-3">Seleccioná una o más categorías</label>
+
+                        <div class="mb-2">
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Rock
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Rock">
+                            </label>
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Pop
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Pop">
+                            </label>
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Classic
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Classic">
+                            </label>
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Electrónica
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Electrónica">
+                            </label>
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Fusión
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Fusión">
+                            </label>
+                            <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="checkbox">Otro
+                                <input id="checkbox" name="categoryAlbum" type="checkbox" value="Otro">
+                            </label>
+                        </div>
+                    </div> -->
+                    <div class="flex flex-col">
+                        <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="imagenAlbum">Imagen de portada</label>
+                        <input name="portada" id="portada" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="imagenAlbum" type="URL"
+                            placeholder="Ingresá el link de la imagen del álbum">
+                    </div>
+
+                    <!-- <div class="flex flex-col">
+                        <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="comentarioAlbum">Comentario del álbum</label>
+                        <textarea class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-14 placeholder:text-sm focus-visible:outline-none" id="comentarioAlbum" type="message" rows="10" cols="50" name="comentarioAlbum"
+                            placeholder="Ingresá el nombre completo del álbum" required> </textarea>
+                    </div> -->
+
+                    <!--BOTON DEL FORMULARIO-->      
+
+                    <div class="mt-6">
+                        <button type="submit" class="text-white hover:text-violet-500 text-lg mt-4  text-center h-10 flex justify-center items-center border-2 border-white rounded-3xl p-1 rounded-full w-11/12 m-auto transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500 cursor-pointer">Crear</button>
+                    </div>
+
+                </div>
+
+                
+            </form>
+        </div>
+
+
+        <div class="grid grid-cols-3 w-11/12" id="display-data"></div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/addAlbum.js"></script>
+
+</body>
+</html>

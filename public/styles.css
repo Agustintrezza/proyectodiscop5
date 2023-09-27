@@ -1,0 +1,14 @@
+body {
+    background-image: url('./imagenes/bocanada7.webp');
+    opacity: 100%;
+}
+
+.contenedor-titulo-texto {
+    background-color: #fff;
+    color: red;
+}
+
+.imagenes-disco {
+    min-width: 100px!important;
+    height: 100px!important;
+}

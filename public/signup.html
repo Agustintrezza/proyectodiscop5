@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <title>Registro</title>
+
+    <style>
+        .sombra {
+            border: 1px solid rgb(124, 146, 212);
+            -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+            -moz-box-shadow: 0px 0px 12px -1px rgb(179, 184, 252);
+            box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-950 border-box">
+     <!--HEADER MOBILE-->
+
+     <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
+
+        <div class="flex justify-end">
+            <h2 class="text-white"></h2>
+            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+        </div>
+    
+        <div class="grid grid-cols-2 w-11/12">
+            <div class="flex items-center justify-center">
+                <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
+                <h1 class="text-white text-lg xl:text-base">album</h1>
+            </div>
+            <div class="flex items-center justify-center">
+                <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
+                <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--HEADER DESKTOP-->
+
+    <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-75 justify-between">
+
+            <div class="flex items-center justify-between">
+
+                <div class="justify-start flex">
+                    <button class="flex items-center justify-center me-7">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5">
+                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">album</span>
+                        </a>
+                    </button>
+                    
+                    <button class="flex items-center justify-center me-7">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
+                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">addAlbum</span>
+                        </a>
+                    </button>
+                    
+                    <button>
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login">
+                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">logIn</h1>
+                        </a>
+                    </button>
+                    
+                    <button>
+                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro">
+                            <h1 class="text-indigo-600 underline text-lg xl:text-base hover:text-indigo-600">resgistro</h1>
+                        </a>
+                    </button>
+                    <button>
+                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
+                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro">
+                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">tours</h1>
+                        </a>
+                    </button>
+                    
+                </div>
+
+                
+                <div>
+                    <div class="flex justify-end">
+                        <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
+                        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                    </div>
+                </div>                
+                
+            </div> 
+    </div>
+    <div> 
+
+
+    <!--FORMULARIO-->
+
+    <div class="grid h-screen place-items-center p-4">
+
+        <div class="w-full sm:w-8/12 md:w-6/12 xl:w-4/12 lg:w-5/12 2xl:w-3/12 2xl:mb-40 2xl:px-6 border-1 rounded-3xl border-pink px-5 py-4 sombra lg:mb-20">
+
+            <div class="">
+                <h1 class="font-bold text-center md:text-start text-3xl md:text-4xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Bienvenidx</h1>
+                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-xl font-bold">!Creá una cuenta y comenzá!</h1>
+            </div>
+
+            <!-- action="https://formspree.io/f/xyyqebln" -->
+            <form id="formulario-register"  method="POST" class="flex flex-col">
+
+                <label class="text-slate-300 text-sm mt-3 mb-1" for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="nombre" type="text" name="nombreDeUsuario" placeholder="Ingresá tú nombre" required> 
+
+                <label class="text-slate-300 text-sm mt-3 mb-1" for="apellido">Apellido</label>
+                <input id="apellido" name="apellido" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="apellido" type="text" name="apellidoDeUsuario" placeholder="Ingresá tú apellido" required> 
+
+                <label class="text-slate-300 text-sm mt-3 mb-1" for="email">Email</label>
+                <input id="email" name="email" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
+
+                <label class="text-slate-300 text-sm mt-3 mb-1" for="password" for="">Password</label>
+                <input id="contraseña" name="contraseña" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
+
+                <div class="flex justify-center mt-6 mb-2 cursor-pointer">
+                    <button type="submit" class="cursor-pointer w-full h-10 text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 rounded-full transition ease-in-out delay-25 hover:scale-105">Registrarme</button>
+                </div>
+
+                <div class="flex justify-center my-2">
+                    <a class="text-white text-center h-10 flex justify-center items-center border-2 border-white rounded-3xl p-1 rounded-full w-full transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500" href="/">Registrarme con Google <img class="w-5 h-5 md:w-6 md:h-6 ms-2" src="./imagenes/logo-google.png" alt="logo-google"> </a>
+                </div>
+
+                <div class="flex my-3 justify-center">
+                    <h3 class="text-white">Ya tengo una cuenta. <a class="text-violet-500 hover:text-violet-400 transition ease-in-out delay-25" href="/signin.html"><u>Iniciar Sesión.</u></a></h3>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts//signup.js"></script>
+
+</body>
+</html>
