@@ -30,8 +30,8 @@ async function connectToMongo() {
         app.listen(process.env.PORT, () => {
             console.log('Conectado a la base de datos. Servidor corriendo en el puerto http://localhost:' + process.env.PORT)
         })
-    } catch {
-        console.log('error')
+    } catch(error) {
+        console.log('error', error)
     }
 }
 
