@@ -1,13 +1,38 @@
+// function onLoad() {
+//     const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+//     if(userInfo === null) {
+//         console.log('No hay token')
+//         // window.location.href = 'http://www.google.com'
+//         window.open("../signin.html", "_self"); 
+//     } else {
+//         console.log('Hay token')
+//     }
+// }
+// import {cerrarSesion} from '../scripts/utils/utils'
+
+// const cerrarSesion = () => {
+// }
+
+// import {isAuth} from './scripts/utils/utils.js'
+
+// console.log(isAuth)
+
 // TRAE LA INFO DE LOS ALBUMES
 async function obtenerAlbumes(req, res) {
-    try {
-        const data = await axios.get("/albums/vertodoslosalbumes");
-        return data.data
-        // console.log(data.data[0].titulo)
-        // titulo = document.createElement("h1")
-        // titulo.innerHTML = 'Pipo'
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const token = userInfo.token
+    console.log(token);
 
-        console.log(data)
+    try {
+        const data = await axios.get("/albums/vertodoslosalbumes", 
+        {
+            headers: {
+                authorization: `Bearer ${token}`,
+            }
+        }
+         );
+         console.log(data.data.albums)
+        return data.data.albums        
       } catch (error) {
         console.log('entra en el error');
         // alerta en caso de error
@@ -28,12 +53,12 @@ const mostrarData = async () => {
 
         return `
             <div class="flex p-4 m-auto">
-            
+
                 <div class="flex flex-col p-2">
                     <p class="text-white text-4xl">${titulo}</p>
                     <p class="text-white">${descripcion}</p>
-                    <p class="text-white">(${lanzamiento2})</p>
-                    <img class="w-full" src="${portada}"/>
+                    <p class="text-white mb-4">(${lanzamiento2})</p>
+                    <img class="w-full w-70 h-70" src="${portada}"/>
                 </div>
                 
             </div>
@@ -70,9 +95,18 @@ async function addAlbum(objectToSend) {
           icon: "success",
           confirmButtonText: "Ok",
         });
+        location.reload()
         // redireccionar a home
       } catch (error) {
         console.log('entra en el error');
         // alerta en caso de error
       }
 }
+
+
+// function cerrarSesion() {
+//     console.log('Se cierra la sesion')
+// }
+
+
+// module.exports = {cerrarSesion}

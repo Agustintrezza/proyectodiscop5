@@ -12,7 +12,8 @@ const userSchema = new mongoose.Schema({
         }
     },
     contraseña: { type: String },
-    favoritos: { type: Array }
+    favoritos: { type: Array },
+    token: {type: String}
 });
 
 module.exports = mongoose.model('userModel', userSchema);

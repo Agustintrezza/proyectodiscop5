@@ -87,9 +87,22 @@
 
                 
                 <div>
-                    <div class="flex justify-end">
-                        <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
-                        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                    <div class="flex justify-end items-center">
+                        <div class="flex items-center" id="container-cerrar-sesion">
+                                <p class="text-white me-4" id="nombre-usuario"></p>
+                                <div>
+                                    <img id="imagen-usuario" class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco">
+                                </div>
+                                <div>
+                                    <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
+                                </div>
+                        </div>
+
+                        <div id="container-sin-sesion" class="flex">
+                            <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
+                            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                        </div>
+                        
                     </div>
                 </div>                
                 
@@ -101,39 +114,26 @@
 
     <div class="grid h-screen place-items-center p-4">
 
-        <div class="h-auto flex flex-col w-full md:w-10/12 lg:w-10/12 xl:w-10/12 2xl:w-9/12 2xl:mb-50 2xl:px-6 border-2 rounded-3xl border-pink pb-12 pt-8 px-10 mt-10 mb-20 sombra">
+        
+        <div class="flex flex-col justify-start w-10/12 my-0">
+            <h1 class="font-bold text-center md:text-start text-4xl py-2 md:text-5xl bg-gradient-to-r from-blue-700 to-violet-300 bg-clip-text text-transparent">Subí tus albumes.</h1>
+        </div> 
 
-            <div class="mb-4">
-                <h1 class="font-bold text-center md:text-start text-4xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Crear un álbum</h1>
-                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-xl font-bold">Ingresá toda la información y creá un álbum.</h1>
-            </div> 
+        <div class="h-auto flex flex-col w-full md:w-10/12 lg:w-10/12 xl:w-10/12 2xl:w-9/12 2xl:mb-50 2xl:px-6 border-2 rounded-3xl border-pink pb-12 pt-4 px-10 mt-5 mb-20 sombra">
+
+            <h1 class="text-slate-300 text-lg text-center md:text-start md:text-3xl mb-4 ">¡Creá tú cuenta y subí hasta 10 discos gratios con toda su información!</h1>
             <!-- action="https://formspree.io/f/xyyqebln" -->
             <form id="formulario" class="md:grid md:grid-cols-2 gap-x-7" method="post">
                 <div>
                     <div class="mb-3">
                         <label class="text-slate-300 text-sm mt-3 mb-3" for="nombre">Titulo del Album</label>
-                        <input id="titulo" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="titulo" type="text" name="titulo" placeholder="Ingresá el título del álbum" required> 
+                        <input id="titulo" class="w-full bg-neutral-800 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm " id="titulo" type="text" name="titulo" placeholder="Ingresá el título del álbum" required> 
                     </div>     
                     
-                    <div class="flex flex-col">
-                        <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="comentarioAlbum">Descripción del álbum</label>
-                        <textarea id="descripcion" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-14 placeholder:text-sm focus-visible:outline-none" id="comentarioAlbum" type="message" rows="10" cols="50" name="descripcion"
-                            placeholder="Ingresá el nombre completo del álbum" required> </textarea>
-                    </div>
-                        
-                        
-                    <!-- <div class="mb-3">
-                        <label class="text-slate-300 text-sm mt-3 mb-3" for="cantcancionesAlbum">Cantidad de canciones</label>
-                        <input class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" max="25" min="0" id="cantcancionesAlbum" type="number" name="cantcancionesAlbum" placeholder="Ingresá la cantidad de canciones del álbum" required> 
-                    </div> -->
-                        
-                </div>
-
-
-                <div>
+                    
                     <div class="mb-3">
                         <label class="text-slate-300 text-sm mt-3 mb-3" for="añoAlbum" for="">Año de lanzamiento</label>
-                        <select name="lanzamiento" id="lanzamiento" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="añoAlbum">
+                        <select name="lanzamiento" id="lanzamiento" class="bg-neutral-800 w-full rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm" id="añoAlbum">
                             <option value="">Seleccioná un año</option>
                             <option value="1950">1950</option>
                             <option value="1951">1951</option>
@@ -210,7 +210,18 @@
                             <option value="2022">2022</option>
                             <option value="2023">2023</option>
                         </select>
-                    </div>
+                    </div>   
+                        
+                    <!-- <div class="mb-3">
+                        <label class="text-slate-300 text-sm mt-3 mb-3" for="cantcancionesAlbum">Cantidad de canciones</label>
+                        <input class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" max="25" min="0" id="cantcancionesAlbum" type="number" name="cantcancionesAlbum" placeholder="Ingresá la cantidad de canciones del álbum" required> 
+                    </div> -->
+                        
+                </div>
+
+
+                <div>
+                    
 
                     <!-- <div class="mb-4">
                         <label class="text-slate-300 text-sm mt-3">Seleccioná una o más categorías</label>
@@ -238,8 +249,14 @@
                     </div> -->
                     <div class="flex flex-col">
                         <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="imagenAlbum">Imagen de portada</label>
-                        <input name="portada" id="portada" class="w-full bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="imagenAlbum" type="URL"
+                        <input name="portada" id="portada" class="w-full bg-neutral-800 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm" id="imagenAlbum" type="URL"
                             placeholder="Ingresá el link de la imagen del álbum">
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label class="text-slate-300 text-sm mt-3 mb-1 me-2" for="comentarioAlbum">Descripción del álbum</label>
+                        <textarea id="descripcion" class="w-full bg-neutral-800 rounded-md p-1.5 text-white text-sm h-14 placeholder:text-sm" id="comentarioAlbum" type="message" rows="10" cols="50" name="descripcion"
+                            placeholder="Ingresá el nombre completo del álbum" required> </textarea>
                     </div>
 
                     <!-- <div class="flex flex-col">
@@ -251,7 +268,7 @@
                     <!--BOTON DEL FORMULARIO-->      
 
                     <div class="mt-6">
-                        <button type="submit" class="text-white hover:text-violet-500 text-lg mt-4  text-center h-10 flex justify-center items-center border-2 border-white rounded-3xl p-1 rounded-full w-11/12 m-auto transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500 cursor-pointer">Crear</button>
+                        <button type="submit" class="border-violet-500 text-violet-500 hover:text-violet-500 text-lg mt-4  text-center h-10 flex justify-center items-center border-2 rounded-3xl p-1 rounded-full w-11/12 m-auto transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500 cursor-pointer">Crear</button>
                     </div>
 
                 </div>
@@ -260,15 +277,40 @@
             </form>
         </div>
 
+        <div class="flex text-start container mb-12">
+            <h1 class="text-white text-5xl w-11/12">Todos los álbumes</h1>
+        </div>
 
-        <div class="grid grid-cols-3 w-11/12" id="display-data"></div>
-
-
+        <div class="grid grid-cols-4" id="display-data"></div>
 
     </div>
 
+    <script>  
+
+        const user = JSON.parse(localStorage.getItem('userInfo'))
+        document.getElementById('container-cerrar-sesion').style.visibility = "hidden"    
+
+        // console.log(user)
+        if(user) {
+                console.log('hay usuario')
+                document.getElementById('container-cerrar-sesion').style.visibility = "visible"
+                document.getElementById('container-sin-sesion').style.display = "none"
+                document.getElementById('nombre-usuario').textContent = user.email;
+            } 
+    
+        function cerrarSesion() {
+            console.log(user)
+            localStorage.removeItem('userInfo')
+            document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
+            window.location.href = "../signin.html"
+        }
+
+        module.exports
+
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./scripts/addAlbum.js"></script>
+    <script type="module" src="./scripts/addAlbum.js" type="text/javascript"></script>
 
 </body>
 </html>

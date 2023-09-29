@@ -4,11 +4,13 @@ const userModel = require('../models/User');
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv');
+const isAuth = require('../public/scripts/utils/utils');
 
 dotenv.config()
 
 //OBETENER TODOS LOS USUARIOS
-router.get('/vertodoslosusuarios', async (req, res) => {
+
+router.get('/vertodoslosusuarios', isAuth, async (req, res) => {
     try {
         const usuarios = await userModel.find()
         res.status(200).send(usuarios);
@@ -23,12 +25,17 @@ router.post('/crearusuario', async (req, res) => {
         const saltRounds = 10; 
         let hash = await bcrypt.hash(req.body.contraseña, saltRounds)
 
+        const payload = {email: req.body.email, contraseña: req.body.contraseña}
+        const secret = process.env.JWT_SECRET
+        const token = jwt.sign(payload, secret, { expiresIn: '1h'})
+
         const newUser = await userModel.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
             contraseña: hash,
-            favoritos: []
+            favoritos: [],
+            token: token
         })
 
         res.status(200).send("Usuario creado exitosamente!");
@@ -59,12 +66,17 @@ router.post('/login', async (req, res) => {
                 const payload = {email: req.body.email, contraseña: contraseña}
                 const secret = process.env.JWT_SECRET
                 const token = jwt.sign(payload, secret, { expiresIn: '1h'})
-                console.log(token);
+
+                console.log(token)
+                
+                user.token = token;
+                
+                // console.log(token);
 
                 // const decodificar = jwt.verify(token, secret);
                 // console.log("VERIFY", decodificar)
-                res.send(token)
-                // res.status(200).send("Te logueaste exitosamente!");
+                // res.send(token)
+                res.status(200).send({ message: "Te logueaste exitosamente!", token: token, user});
 
             } else {
                 res.status(500).send("La contraseña no es válida.");

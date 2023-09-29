@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const albumModel = require('../models/Albums');
+const isAuth = require('../public/scripts/utils/utils');
 
 
 // DEVUELVE TODOS LOS ÁLBUMES
-router.get('/vertodoslosalbumes', async (req, res) => {
+router.get('/vertodoslosalbumes', isAuth, async (req, res) => {
     try {
         const albums = await albumModel.find();
-        res.status(200).send(albums);
+        res.status(200).send({ message: "Te logueaste exitosamente!", albums});
     } catch (error) {
         res.status(200).send("No se pudieron obtener los álbumes, vuelva a intentarlo.");
         console.log(error);
@@ -28,6 +29,7 @@ router.get('/buscaralbumid/:id', async (req, res) => {
 
 // AGREGA UN ÂLBUM
 router.post('/crearalbum', async (req, res) => {
+    console.log(req.headers)
     try {
         await albumModel.create(req.body);
         res.status(200).send("Álbum creado exitosamente!");

@@ -17,8 +17,10 @@ async function loginUser(objectToSend) {
 
     console.log(objectToSend)
      try {
-        await axios.post("/users/login", objectToSend);
-
+      const { data } = await axios.post("/users/login", objectToSend);    
+        const userInfo = data.user[0]
+        localStorage.setItem('userInfo', JSON.stringify(userInfo))
+        // document.getElementById('nombre-usuario').textContent= userInfo.nombre
         swal({
           title: "¡Felicitaciones!",
           text: "Iniciaste sesión correctamente!",
@@ -27,8 +29,6 @@ async function loginUser(objectToSend) {
         }).then((isConfirm) => {
             window.open("../index.html", "_self"); 
        })  
-
-        
         // redireccionar a home
       } catch (error) {
         swal({

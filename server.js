@@ -12,9 +12,6 @@ const albumsRouter = require('./routes/albums.js');
 
 dotenv.config()
 
-// const password = 'SWDc8kzkMpa5JyO3';
-// const url = `mongodb+srv://agus:${password}@db-plataforma5.tly21og.mongodb.net/`;
-
 app.use(express.json());
 app.use(router);
 app.use(express.static(path.join(__dirname, 'public')))
