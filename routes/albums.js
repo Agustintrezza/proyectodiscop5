@@ -5,7 +5,7 @@ const isAuth = require('../public/scripts/utils/utils');
 
 
 // DEVUELVE TODOS LOS ÁLBUMES
-router.get('/vertodoslosalbumes', isAuth, async (req, res) => {
+router.get('/vertodoslosalbumes', async (req, res) => {
     try {
         const albums = await albumModel.find();
         res.status(200).send({ message: "Te logueaste exitosamente!", albums});
@@ -28,7 +28,7 @@ router.get('/buscaralbumid/:id', async (req, res) => {
 })
 
 // AGREGA UN ÂLBUM
-router.post('/crearalbum', async (req, res) => {
+router.post('/crearalbum',  isAuth, async (req, res) => {
     console.log(req.headers)
     try {
         await albumModel.create(req.body);

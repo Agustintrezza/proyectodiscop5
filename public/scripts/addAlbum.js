@@ -19,17 +19,14 @@
 
 // TRAE LA INFO DE LOS ALBUMES
 async function obtenerAlbumes(req, res) {
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-    const token = userInfo.token
-    console.log(token);
-
+    
     try {
         const data = await axios.get("/albums/vertodoslosalbumes", 
-        {
-            headers: {
-                authorization: `Bearer ${token}`,
-            }
-        }
+        // {
+        //     headers: {
+        //         authorization: `Bearer ${token}`,
+        //     }
+        // }
          );
          console.log(data.data.albums)
         return data.data.albums        
@@ -46,10 +43,11 @@ const mostrarData = async () => {
     const payload = await obtenerAlbumes();
 
     let displayData = payload.map((object) => {
-        const {titulo, descripcion, portada, lanzamiento} = object;
+        const {titulo, descripcion, portada, lanzamiento, _id} = object;
 
         let lanzamiento2 = new Date(lanzamiento).getFullYear();
         console.log(lanzamiento2)
+
 
         return `
             <div class="flex p-4 m-auto">
@@ -59,6 +57,8 @@ const mostrarData = async () => {
                     <p class="text-white">${descripcion}</p>
                     <p class="text-white mb-4">(${lanzamiento2})</p>
                     <img class="w-full w-70 h-70" src="${portada}"/>
+                    <p class="text-white mt-1 mb-4">id: ${_id}</p>
+
                 </div>
                 
             </div>
@@ -68,6 +68,10 @@ const mostrarData = async () => {
     display.innerHTML = displayData;
 }   
 mostrarData();
+
+const id = document.getElementById('boton-eliminar');
+console.log(id);
+
 
 //EVENTO AL HACER SUBMIT AL FORMULARIO
 const formulario = document.getElementById('formulario');
@@ -85,10 +89,20 @@ function getInputValues() {
 
 // CREÁ EL ÁLBUM
 async function addAlbum(objectToSend) {
-
-    console.log(objectToSend)
+    
      try {
-        await axios.post("/albums/crearalbum", objectToSend);
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        const token = userInfo.token || null
+        console.log(token);
+        console.log(objectToSend)
+
+        if(userInfo) {
+           await axios.post("/albums/crearalbum", objectToSend,
+        {
+            headers: {
+                authorization: `Bearer ${token}`,
+            }
+        })
         swal({
           title: "Success!",
           text: "Album added to the collection!",
@@ -96,8 +110,26 @@ async function addAlbum(objectToSend) {
           confirmButtonText: "Ok",
         });
         location.reload()
-        // redireccionar a home
+        // redireccionar a home 
+        }
+        
       } catch (error) {
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        if(!userInfo) {
+            swal({
+                title: "¡Debes iniciar sesión!",
+                text: "Para crear albumes es necesario iniciar sesión!",
+                icon: "warning",
+                confirmButtonText: "Ok",
+              });
+        } else {
+            swal({
+                title: "¡Revisá bien los datos ingresados!",
+                text: "Todos los campos son requeridos, revisá que no haya errores.",
+                icon: "warning",
+                confirmButtonText: "Ok",
+              });
+        }
         console.log('entra en el error');
         // alerta en caso de error
       }

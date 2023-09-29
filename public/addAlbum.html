@@ -278,11 +278,17 @@
         </div>
 
         <div class="flex text-start container mb-12">
-            <h1 class="text-white text-5xl w-11/12">Todos los álbumes</h1>
+            <h1 class="text-white font-thin text-5xl w-10/12">Todos los álbumes</h1>
         </div>
 
         <div class="grid grid-cols-4" id="display-data"></div>
 
+        <!--FOOTER-->
+
+        <div class="flex bg-neutral-900 justify-center items-center p-8 mt-10">         
+            <p class="text-white">Plataforma 5 - Proyecto Agustin Trezza</p>   
+            <img class="w-12 h-12 ms-5 rounded" src="./imagenes/p5logo.jpeg" alt="logo-p5">  
+        </div>
     </div>
 
     <script>  
@@ -301,7 +307,7 @@
         function cerrarSesion() {
             console.log(user)
             localStorage.removeItem('userInfo')
-            document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
+            // document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
             window.location.href = "../signin.html"
         }
 

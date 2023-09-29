@@ -27,7 +27,7 @@ router.post('/crearusuario', async (req, res) => {
 
         const payload = {email: req.body.email, contraseña: req.body.contraseña}
         const secret = process.env.JWT_SECRET
-        const token = jwt.sign(payload, secret, { expiresIn: '1h'})
+        const token = jwt.sign(payload, secret, { expiresIn: '3h'})
 
         const newUser = await userModel.create({
             nombre: req.body.nombre,
@@ -65,7 +65,7 @@ router.post('/login', async (req, res) => {
             if(match) {
                 const payload = {email: req.body.email, contraseña: contraseña}
                 const secret = process.env.JWT_SECRET
-                const token = jwt.sign(payload, secret, { expiresIn: '1h'})
+                const token = jwt.sign(payload, secret, { expiresIn: '3h'})
 
                 console.log(token)
                 
