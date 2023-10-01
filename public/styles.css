@@ -1,6 +1,6 @@
 body {
     background-image: url('./imagenes/bocanada7.webp');
-    opacity: 100%;
+    opacity: 90%;
 }
 
 .contenedor-titulo-texto {
@@ -11,4 +11,65 @@ body {
 .imagenes-disco {
     min-width: 100px!important;
     height: 100px!important;
+}
+
+.back-video {
+    position: absolute;
+    top: 12%;
+    row-gap: 30%;
+    height: 10rem;
+    /* right: 0;
+    bottom: 0;
+    z-index: -1; */
+}
+/* video {
+    width: 70%;
+} */
+@media (max-width:768px) {
+    .back-video {
+        row-gap: 30%;
+    }
+    /* .video {
+        width: 60%;
+    } */
+    .texto-index-content {
+        padding: 1rem 1rem!important;
+        font-size: 16px!important;
+        list-style: none;
+        line-height: 1.2!important;
+        font-weight: 300;
+        text-shadow: 0px 1px 1px rgba(213, 208, 208, 0.553);
+    }
+}
+
+
+.bg-class {
+    background: rgba(0, 0, 0, 0.735);
+}
+.texto-index-content {
+    font-size: 21px;
+    list-style: none;
+    line-height: 1.4;
+    font-weight: 300;
+    text-shadow: 0px 1px 1px rgba(213, 208, 208, 0.553);
+}
+
+.bg-black-custom {
+    background-color: rgba(0, 0, 0, 0.731)!important;
+}
+.bg-black-custom2 {
+    background-color: rgba(0, 0, 0, 0.395)!important;
+}
+.fuente {
+    font-size: 23px!important;
+    margin-bottom: -5px!important;
+}
+.fuente-subtitulo {
+    margin-bottom: -5px!important;
+}
+.altura {
+    height: 30px!important;
+}
+.altura-navegacion {
+    height: 40px!important;
 }

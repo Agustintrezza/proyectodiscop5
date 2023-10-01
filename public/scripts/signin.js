@@ -1,3 +1,35 @@
+const user = JSON.parse(localStorage.getItem('userInfo'))
+document.getElementById('container-cerrar-sesion-login').style.visibility = "hidden";
+// document.getElementById('logo-p5').style.display= 'none';
+document.getElementById('logo-p5-login').style.display= 'none';
+
+
+
+console.log(user)
+if(user) {
+        console.log('hay usuario')
+        // document.getElementById('logo-p5').style.display= 'block';
+        document.getElementById('logo-p5-login').style.display= 'block';
+
+        // document.getElementById('alerta-sesion').style.display = "none"
+
+        // document.getElementById('container-cerrar-sesion').style.visibility = "visible"
+        document.getElementById('container-cerrar-sesion-login').style.visibility = "visible"
+
+        // document.getElementById('container-sin-sesion').style.display = "none"
+        document.getElementById('container-sin-sesion-login').style.display = "none"
+
+        document.getElementById('nombre-usuario').textContent = user.email;
+    } 
+
+function cerrarSesion() {
+    console.log(user)
+    localStorage.removeItem('userInfo')
+    // document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
+    window.location.href = "../signin.html"
+}
+
+
 //EVENTO AL HACER SUBMIT AL FORMULARIO
 const formulario = document.getElementById('formulario-login');
 formulario.addEventListener('submit', function (e) {

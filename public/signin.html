@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <link href="./styles.css" rel="stylesheet">
+
     <title>Login</title>
 
     <style>
@@ -43,59 +45,103 @@
         </div>
     </div>
 
-    <!--HEADER DESKTOP-->
+        <!--HEADER DESKTOP-->
 
-    <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-75 justify-between">
+        <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-90 justify-between">
+            
+            
 
-            <div class="flex items-center justify-between">
-
+            <div class="flex items-center justify-between altura-navegacion">
+    
+                <div class="flex items-center" id="logo-p5-login">
+                    <div class="flex items-center ">
+                        <img class="logo-plataforma5 w-10 h-10 rounded me-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                        <div class="flex flex-col">
+                            <!-- <h2 class="font-thin fuente text-white text-xl m-0">proyecto disco</h2> -->
+                            <h2 class="text-white text-lg font-thin fuente-subtitulo">Agustin Trezza - proyectoDisco</h2>
+                            <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+    
                 <div class="justify-start flex">
                     <button class="flex items-center justify-center me-7">
                         <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">album</span>
+                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                            <span class="text-white text-lg hover:text-indigo-600">album</span>
                         </a>
                     </button>
                     
                     <button class="flex items-center justify-center me-7">
                         <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">addAlbum</span>
+                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                            <span class="text-white text-lg hover:text-indigo-600">addAlbum</span>
                         </a>
                     </button>
                     
                     <button>
                         <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login">
+                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login"> -->
                             <h1 class="text-indigo-600 underline text-lg xl:text-base hover:text-indigo-600">logIn</h1>
                         </a>
                     </button>
                     
                     <button>
                         <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro">
-                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">resgistro</h1>
+                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro"> -->
+                            <h1 class="text-white text-lg hover:text-indigo-600">resgistro</h1>
                         </a>
                     </button>
                     <button>
                         <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro">
-                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">tours</h1>
+                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro"> -->
+                            <h1 class="text-white text-lg hover:text-indigo-600">tours</h1>
                         </a>
                     </button>
                     
                 </div>
+    
                 
-                <div>
-                    <div class="flex justify-end">
-                        <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
-                        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                <div class="flex items-center">
+                    <div class="flex items-center" id="container-cerrar-sesion-login">
+                        <p class="text-white me-4" id="nombre-usuario"></p>
+                        <div>
+                            <img id="imagen-usuario" class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco">
+                        </div>
+                        <div>
+                            <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
+                        </div>
+                    </div>
+    
+                    <!-- <div >
+                        <h2 class="font-thin text-white text-lg m-0">Curso Introductorio Fullstack</h2>
+                    </div> -->
+    
+                    <div id="container-sin-sesion-login" class="flex justify-end items-center gap-12 ">
+                        <!-- <div>
+                            <a href="./signin.html" class="font-thin text-violet-500 text-lg me-5 hover:text-violet-600">Por favor! iniciá sesión</a>
+                        </div> -->
+    
+                        <div class="flex items-center altura">
+                            <div class="flex flex-col">
+                                <h2 class="font-thin text-white fuente m-0 ">Curso Introductorio Fullstack</h2>
+                                <h2 class="text-white text-sm">Agustin Trezza</h2>
+                                <!-- <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
+                            </div>
+                            <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                        </div>
+                        
                     </div>
                 </div>                
                 
             </div> 
     </div>
+
+
+
     <div> 
+
 
 
     <!--FORMULARIO-->
@@ -104,28 +150,28 @@
 
     <div class="grid h-full place-items-center px-7">
 
-        <div class="w-full mt-11 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 2xl:px-6 border-1 rounded-3xl border-pink px-5 pt-6 pb-6 sombra">
+        <div class="w-full mt-11 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 2xl:px-6 rounded-3xl px-5 pt-6 pb-6">
 
             <div class="mb-2">
-                <h1 class="font-bold text-center md:text-start text-3xl md:text-4xl md:text-4xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Iniciá Sesión.</h1>
-                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-xl font-bold">!Creá una cuenta y comenzá!</h1>
+                <h1 class="font-bold text-center md:text-start text-3xl md:text-4xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Iniciá Sesión</h1>
+                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-2xl font-bold">!Gracias por visitar mi proyecto!</h1>
             </div>
 
             <!-- action="https://formspree.io/f/xyyqebln" -->
             <form id="formulario-login" method="POST" class="flex flex-col">
 
-                <label class="text-slate-300 text-sm mt-3 mb-1" for="email">Email</label>
-                <input id="email" name="email" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
+                <label class="text-white text-base mt-2" for="email">Email</label>
+                <input id="email" name="email" class="mt-1 bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
 
-                <label class="text-slate-300 text-sm mt-3 mb-1" for="password" for="">Password</label>
-                <input id="contraseña" name="contraseña" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
+                <label class="text-white text-base mt-2" for="password" for="">Password</label>
+                <input id="contraseña" name="contraseña" class="mt-1 bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
 
                 <div class="flex justify-center items-center mt-6 mb-2 cursor-pointer">
                     <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105">Iniciar Sesión</button>
                 </div>
 
                 <div class="flex justify-center my-2">
-                    <a class="text-white text-center flex justify-center items-center border-2 border-white rounded-3xl p-3 h-10 rounded-full w-full transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500" href="/">Iniciar sesión con Google <img class="w-5 h-5 md:w-5 md:h-5 ms-2" src="./imagenes/logo-google.png" alt="logo-google"> </a>
+                    <a class="text-white text-center flex justify-center items-center border-2 border-violet-500 rounded-3xl p-3 h-10 rounded-full w-full transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500" href="/">Iniciar sesión con Google <img class="w-5 h-5 md:w-5 md:h-5 ms-2" src="./imagenes/logo-google.png" alt="logo-google"> </a>
                 </div>
 
                 <div class="flex justify-center my-2">
@@ -136,13 +182,46 @@
 
         </div>
 
-        <!--FOOTER-->
 
-        <div class="flex bg-neutral-900 justify-center items-center p-8 mt-10">         
-            <p class="text-white">Plataforma 5 - Proyecto Agustin Trezza</p>   
-            <img class="w-12 h-12 ms-5 rounded" src="./imagenes/p5logo.jpeg" alt="logo-p5">  
-        </div>
     </div>
+
+    <!-- <script>  
+
+        const user = JSON.parse(localStorage.getItem('userInfo'))
+        document.getElementById('container-cerrar-sesion').style.visibility = "hidden";
+        document.getElementById('logo-p5').style.display= 'none';
+        document.getElementById('logo-p5-login').style.display= 'none';
+
+
+
+        console.log(user)
+        if(user) {
+                console.log('hay usuario')
+                // document.getElementById('logo-p5').style.display= 'block';
+                document.getElementById('logo-p5-login').style.display= 'block';
+
+                // document.getElementById('alerta-sesion').style.display = "none"
+
+                // document.getElementById('container-cerrar-sesion').style.visibility = "visible"
+                document.getElementById('container-cerrar-sesion-login').style.visibility = "visible"
+
+                // document.getElementById('container-sin-sesion').style.display = "none"
+                document.getElementById('container-sin-sesion-login').style.display = "none"
+
+                document.getElementById('nombre-usuario').textContent = user.email;
+            } 
+    
+        function cerrarSesion() {
+            console.log(user)
+            localStorage.removeItem('userInfo')
+            // document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
+            window.location.href = "../signin.html"
+        }
+
+
+        module.exports
+
+    </script> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

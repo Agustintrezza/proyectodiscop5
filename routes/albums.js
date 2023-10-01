@@ -51,10 +51,22 @@ router.put('/actualizaralbum/:id', async (request, response) => {
 });
 
 // ELIMINA UN ÄLBUM
-router.delete('/eliminaralbum/:id', async (req, res) => {
+router.delete('/eliminaralbum/:id', isAuth, async (req, res) => {
+    console.log(req.params.id)
     try {
-        const albumEliminado = await albumModel.findByIdAndDelete(req.params.id)
-        res.status(204).send(albumEliminado);
+
+        const match = await albumModel.findById(req.params.id)
+        if(match) {
+            // console.log('hubo match')
+            const albumEliminado = await albumModel.findByIdAndDelete(req.params.id)
+            // console.log(albumEliminado)
+            res.status(204).send('El álbum se eliminó correctamente');
+
+        } else {
+            console.log('no hubo match')
+            res.status(500).send({message: 'Ese id no corresponde a un álbum'});
+
+        }
     } catch (error) {
         res.status(200).send("No se encontro el álbum que se quiere elminar.");
         console.log(error);

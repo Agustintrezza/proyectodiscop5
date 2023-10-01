@@ -37,7 +37,7 @@ async function obtenerAlbumes(req, res) {
 }
 obtenerAlbumes();
 
-//ARMA EL TEMPLATE Y RENDERIZA TODOS LOS ALBUNES.
+//ARMA EL TEMPLATE Y RENDERIZA TODOS LOS ALBUMES.
 const display = document.querySelector("#display-data");
 const mostrarData = async () => {
     const payload = await obtenerAlbumes();
@@ -50,10 +50,10 @@ const mostrarData = async () => {
 
 
         return `
-            <div class="flex p-4 m-auto">
+            <div class="flex p-2 m-auto">
 
-                <div class="flex flex-col p-2">
-                    <p class="text-white text-4xl">${titulo}</p>
+                <div class="flex flex-col p-1">
+                    <p class="text-white text-3xl">${titulo}</p>
                     <p class="text-white">${descripcion}</p>
                     <p class="text-white mb-4">(${lanzamiento2})</p>
                     <img class="w-full w-70 h-70" src="${portada}"/>
@@ -109,7 +109,9 @@ async function addAlbum(objectToSend) {
           icon: "success",
           confirmButtonText: "Ok",
         });
-        location.reload()
+        setTimeout(() => {
+          location.reload()
+        }, 3000);
         // redireccionar a home 
         }
         
@@ -135,6 +137,74 @@ async function addAlbum(objectToSend) {
       }
 }
 
+
+//EVENTO AL HACER SUBMIT AL FORMULARIO
+const formularioEliminar = document.getElementById('formulario-eliminar');
+formularioEliminar.addEventListener('submit', function (e) {
+    e.preventDefault()
+    getInputValues2()
+})
+
+//RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
+function getInputValues2() {
+    const valoresFormulario = new FormData(formularioEliminar)
+    const objectToSend2 = Object.fromEntries(valoresFormulario);
+    const id = objectToSend2.id
+    return eliminarAlbum(id)
+}
+
+
+// ELIMINA UN ÁLBUM POR ID
+     async function eliminarAlbum(id) {
+        console.log('Elimina', id, )
+
+        if (window.confirm('Estás seguro que querés eliminar el álbum?')) {
+
+            try {
+                const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+                const token = userInfo.token || null
+
+                const data = await axios.delete(`/albums/eliminaralbum/${id}`, 
+                {
+                  headers: {
+                      authorization: `Bearer ${token}`,
+                  }
+                });
+                 swal({
+                    title: "El álbum fue eliminado correctamente!",
+                    // text: "El álbum fue eliminado correctamente!",
+                    icon: "success",
+                    // confirmButtonText: "Ok",
+                  });
+                  setTimeout(() => {
+                    location.reload()
+                  }, 3000);
+                  
+                 console.log(data)
+                // return data.data.albums        
+              } catch (error) {
+                const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+                if(!userInfo) {
+                    swal({
+                        title: "¡Debes iniciar sesión!",
+                        text: "Tienes que iniciar sesión para eliminar álbumes.",
+                        icon: "warning",
+                        confirmButtonText: "Ok",
+                      });
+                } else {
+                    swal({
+                        title: "¡No existe ningún álbum con ese ID!",
+                        text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
+                        icon: "warning",
+                        confirmButtonText: "Ok",
+                      });
+                }
+                console.log('entra en el error');
+
+              }
+        }
+        
+    }
 
 // function cerrarSesion() {
 //     console.log('Se cierra la sesion')
