@@ -15,36 +15,38 @@
 
     <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
 
-        <div class="flex justify-end">
-            <h2 class="text-white"></h2>
-            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./assets/imagenes/p5logo.jpeg" alt="logo-p5">
+        <div class="flex justify-center py-3">
+            <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
+            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
         </div>
     
-        <div class="grid grid-cols-2 w-11/12">
-            <div class="">
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                    <h1 class="text-white text-lg xl:text-base">album</h1>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                    <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
-                </div>
+        <div class="grid gap-0 grid-cols-2 w-full">
+
+            <div class="flex flex-col justify-center">
+                <a href="index.html" class="flex items-center justify-center mb-2">
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                    <h1 class="text-white text-2xl">Album</h1>
+                </a>
+                <a href="signin.html" class="flex items-center justify-center">
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                    <h1 class="text-white text-2xl">SignIn</h1>
+                </a>
             </div>
-            <div>
-                <button class="flex items-center justify-center me-7">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
+
+            <div class="flex flex-col justify-center">
+                <button class="flex items-center justify-center">
+                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
                         <div class="flex items-center justify-center">
-                            <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                            <h1 class="text-white text-lg xl:text-base">album</h1>
+                            <h1 class="text-white text-center text-2xl">AddAlbum</h1>
+                            <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
                         </div>
                     </a>
                 </button>
 
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                    <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
-                </div>
+                <a class="flex items-center justify-center" href="./signup.html">
+                    <h1 class="text-white text-center text-2xl">SignOut</h1>
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                </a>
             </div>
             
         </div>
@@ -322,7 +324,7 @@
                     <div class="">
                         <div class="flex flex-col md:flex-row justify-between px-4 py-2 bg-gradient-to-r from-transparent to-sky-900">
                             <div class="mb-2 md:mb-0">
-                                <h1 class="font-bold text-center md:text-start text-4xl  md:text-6xl bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent ">Bocanada</h1>
+                                <h1 class="font-bold text-center md:text-start text-6xl md:text-6xl bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent ">Bocanada</h1>
                             </div>
                             
                         </div>
@@ -342,7 +344,7 @@
                             caracterizaron al artista, hacen de Bocanada una obra tan indispensable cómo recomendada.
                
                         </p>
-                        <div class="justify-end flex bg-black-custom2">
+                        <div class="justify-center md:justify-end flex bg-black-custom2">
                             <div class="flex text-end items-center justify-end md:justify-start me-5 mb-2 ">
                                 <img class="w-8 h-8 md:h-10 md:w-10 rounded-full me-2" src="./imagenes/logo-twitter.png" alt="logo-de-twitter">
                                 <h3 class="text-lg font-light text-white tracking-wide text-white tracking-tighter">@gustavoceratiok
@@ -356,8 +358,8 @@
                 <!--REPRODUCTOR-->
                 <!--TITULO Y BOTONES REPRODUCTOR-->
                 <div class="bg-neutral-950">
-                    <div class="mt-5">
-                        <h1 class="text-white font-normal text-4xl w-full">Agregar canciones al álbum Bocanada</h1>
+                    <div class="my-5">
+                        <h1 class="text-white font-normal text-center md:text-start text-4xl w-full">Canciones del álbum Bocanada</h1>
                         <p id="alerta-sesion-canciones" class="text-white">(Debe iniciar sesión)</p>
                     </div>
                     <div class="flex justify-between items-center">
@@ -396,9 +398,16 @@
                 <div id="display-data"></div>
 
                 
+                <div class="my-5">
+                    <h1 class="text-white font-normal text-center md:text-start text-4xl w-full">Agregar canciones al álbum.</h1>
+                    <!-- <p id="alerta-sesion-canciones" class="text-white">(Debe iniciar sesión)</p> -->
+                </div>
+
                     <form id="formulario-cancion" method="POST" class="flex flex-col mt-4 mb-4">
 
-                        <div class="grid grid-cols-2 gap-10">
+                        <div class="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-10">
+
+                            
 
                             <div class="flex flex-col">
                                 <label class="text-slate-300 text-lg mb-1" for="id">Título de la canción</label>
@@ -412,7 +421,7 @@
                             
                         </div>
                         
-                        <div class="grid mt-6 gap-5 items-center grid-cols-[90%_minmax(10%,_1fr)_100px]">
+                        <div class="grid mt-6 gap-5 items-center grid-cols-1 md:grid-cols-[90%_minmax(10%,_1fr)_100px]">
 
                             <div class="cursor-pointer">
                                 <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-xl font-light text-white bg-blue-700 border-2 border-none p-5 h-10 rounded-full transition ease-in-out delay-25 hover:bg-blue-900">Agregar canción</button>
@@ -450,17 +459,16 @@
                                     </button>
                                 </div>
                                 <!-- Modal body -->
-                                        <form id="formulario-eliminar-cancion" method="POST" class="flex flex-col px-10 mb-4">
+                                    <form id="formulario-eliminar-cancion" method="POST" class="flex flex-col px-10 mb-4">
 
-                                            <label class="text-slate-300 text-sm mb-1" for="id">Id de la cancion</label>
-                                            <input id="id" name="id" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" type="text" placeholder="Ingresá el id de la canción que querés eliminar" required> 
+                                        <label class="text-slate-300 text-sm mb-1" for="id">Id de la cancion</label>
+                                        <input id="id" name="id" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" type="text" placeholder="Ingresá el id de la canción que querés eliminar" required> 
+                        
                             
-                                
-                                            <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
-                                                <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-red-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105">Eliminar Canción</button>
-                                            </div>
-                                
-                                        </form>
+                                        <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
+                                            <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-red-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105">Eliminar Canción</button>
+                                        </div>
+                                    </form>
                             </div>
                         </div>
                     </div>

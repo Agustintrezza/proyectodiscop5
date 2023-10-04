@@ -30,22 +30,42 @@
 
     <!--HEADER MOBILE-->
 
-     <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
+    <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
 
-        <div class="flex justify-end">
-            <h2 class="text-white"></h2>
+        <div class="flex justify-center py-3">
+            <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
             <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
         </div>
     
-        <div class="grid grid-cols-2 w-11/12">
-            <div class="flex items-center justify-center">
-                <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                <h1 class="text-white text-lg xl:text-base">album</h1>
+        <div class="grid gap-2 grid-cols-2 w-full">
+
+            <div class="flex flex-col justify-center">
+                <a href="index.html" class="flex items-center justify-center mb-2">
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                    <h1 class="text-white text-2xl">album</h1>
+                </a>
+                <a href="signin.html" class="flex items-center justify-center">
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                    <h1 class="text-white text-2xl">signin</h1>
+                </a>
             </div>
-            <div class="flex items-center justify-center">
-                <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
+
+            <div class="flex flex-col justify-center">
+                <button class="flex items-center justify-start">
+                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                        <div class="flex items-center justify-center">
+                            <h1 class="text-white text-start text-2xl">addAlbum</h1>
+                            <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                        </div>
+                    </a>
+                </button>
+
+                <a class="flex items-center justify-start" href="./signup.html">
+                    <h1 class="text-white text-2xl">signout</h1>
+                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                </a>
             </div>
+            
         </div>
     </div>
 
@@ -304,7 +324,7 @@
                     <!--BOTON DEL FORMULARIO-->      
 
                     <div class="mt-6">
-                        <button type="submit" class="border-violet-500 text-violet-500 hover:text-violet-500 text-lg mt-4  text-center h-10 flex justify-center items-center border-2 rounded-3xl p-1 rounded-full w-full m-auto transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500 cursor-pointer">Crear</button>
+                        <button type="submit" class="sombra1 border-violet-500 text-violet-500 hover:text-violet-500 text-lg mt-4  text-center h-10 flex justify-center items-center border-2 rounded-3xl p-1 rounded-full w-full m-auto transition ease-in-out delay-25 hover:scale-105 hover:border-violet-500 cursor-pointer">Crear</button>
                     </div>
 
                 </div>
@@ -331,7 +351,7 @@
             
         </div>
 
-        <div class="grid grid-cols-4" id="display-data"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4" id="display-data"></div>
           
         <!-- Main modal -->
         <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">

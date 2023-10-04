@@ -10,6 +10,8 @@ const path = require('path');
 const usersRouter = require('./routes/users.js');
 const albumsRouter = require('./routes/albums.js');
 const cancionesRouter = require('./routes/canciones.js');
+const conciertosRouter = require('./routes/conciertos.js');
+
 
 dotenv.config()
 
@@ -21,6 +23,7 @@ app.use("/health", (req, res) => res.sendStatus(200));
 app.use('/users', usersRouter);
 app.use('/albums', albumsRouter);
 app.use('/canciones', cancionesRouter);
+app.use('/conciertos', conciertosRouter);
 
 async function connectToMongo() {
     try {

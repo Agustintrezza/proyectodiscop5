@@ -107,19 +107,19 @@ const mostrarData = async () => {
       return `
   
               <div class="flex justify-between items-center bg-neutral-900 rounded p-3 mt-2 mb-2 flex hover:bg-gradient-to-r from-neutral-900 to-blue-700 transition ease-in-out delay-25  hover:border-r-2 border-r-sky-900">
-
+            
                   <div class="flex justify-between items-center gap-6">
                       <div>
                         <p class="text-white">${indice + 1 }</p>
                       </div>
                       <div>
                         <p class="text-white text-xl">${titulo}</p>
+                        <div class="text-neutral-300">${_id}</div>
                       </div>
-                      <div class="text-neutral-300">${_id}</div>
                   </div>
 
-                  <div>
-                      <p class="text-white">${duracion}</p>
+                  <div class="">
+                      <p class="text-white hidden md:block">${duracion}</p>
                   </div>
 
                   <div class="flex items-center">
@@ -129,6 +129,7 @@ const mostrarData = async () => {
                   
 
               </div>
+
             
       `
   }).join("");

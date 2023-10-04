@@ -5,104 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./styles.css" rel="stylesheet">
     <title>Agregar Tours</title>
 </head>
 <body class="bg-neutral-950 border-box">
 
 
-    <!--HEADER MOBILE-->
+  <!--HEADER MOBILE-->
 
-    <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
+  <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
 
-        <div class="flex justify-end">
-            <h2 class="text-white"></h2>
-            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-        </div>
-    
-        <div class="grid grid-cols-2 w-11/12">
-            <div class="">
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                    <h1 class="text-white text-lg xl:text-base">album</h1>
-                </div>
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                    <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
-                </div>
-            </div>
-            <div>
-                <button class="flex items-center justify-center me-7">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
-                        <div class="flex items-center justify-center">
-                            <img class="invert logo-plataforma5 w-6 h-6 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                            <h1 class="text-white text-lg xl:text-base">album</h1>
-                        </div>
-                    </a>
-                </button>
-
-                <div class="flex items-center justify-center">
-                    <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                    <h1 class="text-white text-lg xl:text-base">addAlbum</h1>
-                </div>
-            </div>
-            
-        </div>
+    <div class="flex justify-center py-3">
+        <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
+        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
     </div>
 
-    <!--HEADER DESKTOP-->
+    <div class="grid gap-2 grid-cols-2 w-full">
 
-    <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-75 justify-between">
+        <div class="flex flex-col justify-center">
+            <a href="index.html" class="flex items-center justify-center mb-2">
+                <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                <h1 class="text-white text-2xl">album</h1>
+            </a>
+            <a href="signin.html" class="flex items-center justify-center">
+                <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                <h1 class="text-white text-2xl">signin</h1>
+            </a>
+        </div>
 
-            <div class="flex items-center justify-between">
-
-                <div class="justify-start flex">
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5">
-                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">album</span>
-                        </a>
-                    </button>
-                    
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon">
-                            <span class="text-white text-lg xl:text-base hover:text-indigo-600 ">addAlbum</span>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login">
-                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">logIn</h1>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro">
-                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">resgistro</h1>
-                        </a>
-                    </button>
-
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
-                            <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro">
-                            <h1 class="text-indigo-600 underline text-lg xl:text-base hover:text-indigo-600">tours</h1>
-                        </a>
-                    </button>
-                    
-                </div>
-
-                
-                <div>
-                    <div class="flex justify-end">
-                        <h2 class="text-white">proyectoDisco - Agustin Trezza</h2>
-                        <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+        <div class="flex flex-col justify-center">
+            <button class="flex items-center justify-start">
+                <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                    <div class="flex items-center justify-center">
+                        <h1 class="text-white text-start text-2xl">addAlbum</h1>
+                        <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
                     </div>
-                </div>                
-                
-            </div> 
+                </a>
+            </button>
+
+            <a class="flex items-center justify-start" href="./signup.html">
+                <h1 class="text-white text-2xl">signout</h1>
+                <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+            </a>
+        </div>
+        
     </div>
+</div>
+
+
+                <!--HEADER DESKTOP-->
+
+                <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-90 justify-between">
+            
+            
+
+                    <div class="flex items-center justify-between altura-navegacion">
+            
+                        <div class="flex items-center" id="logo-p5-conciertos">
+                            <div class="flex items-center ">
+                                <img class="logo-plataforma5 w-10 h-10 rounded me-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                                <div class="flex flex-col">
+                                    <!-- <h2 class="font-thin fuente text-white text-xl m-0">proyecto disco</h2> -->
+                                    <h2 class="text-white text-lg font-thin fuente-subtitulo">Agustin Trezza - proyectoDisco</h2>
+                                    <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2>
+                                </div>
+                            </div>
+                            
+                        </div>
+            
+                        <div class="justify-start flex">
+                            <button class="flex items-center justify-center me-7">
+                                <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
+                                    <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                                    <span class="text-white text-lg hover:text-indigo-600">album</span>
+                                </a>
+                            </button>
+                            
+                            <button class="flex items-center justify-center me-7">
+                                <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                                    <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                                    <span class="text-white text-lg hover:text-indigo-600">addAlbum</span>
+                                </a>
+                            </button>
+                            
+                            <button>
+                                <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
+                                    <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login"> -->
+                                    <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">logIn</h1>
+                                </a>
+                            </button>
+                            
+                            <button>
+                                <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
+                                    <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro"> -->
+                                    <h1 class="text-white text-lg hover:text-indigo-600">resgistro</h1>
+                                </a>
+                            </button>
+                            <button>
+                                <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
+                                    <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro"> -->
+                                    <h1 class="text-indigo-600 underline text-lg hover:text-indigo-600">tours</h1>
+                                </a>
+                            </button>
+                            
+                        </div>
+            
+                        
+                        <div class="flex items-center">
+                            <div class="flex items-center" id="container-cerrar-sesion-conciertos">
+                                <p class="text-white me-4" id="nombre-usuario"></p>
+                                <div>
+                                    <img id="imagen-usuario" class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco">
+                                </div>
+                                <div>
+                                    <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
+                                </div>
+                            </div>
+            
+                            <!-- <div >
+                                <h2 class="font-thin text-white text-lg m-0">Curso Introductorio Fullstack</h2>
+                            </div> -->
+            
+                            <div id="container-sin-sesion-conciertos" class="flex justify-end items-center gap-12 ">
+                                <!-- <div>
+                                    <a href="./signin.html" class="font-thin text-violet-500 text-lg me-5 hover:text-violet-600">Por favor! iniciá sesión</a>
+                                </div> -->
+            
+                                <div class="flex items-center altura">
+                                    <div class="flex flex-col">
+                                        <h2 class="font-thin text-white fuente m-0 ">Curso Introductorio Fullstack</h2>
+                                        <h2 class="text-white text-sm">Agustin Trezza</h2>
+                                        <!-- <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
+                                    </div>
+                                    <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                                </div>
+                                
+                            </div>
+                        </div>                
+                        
+                    </div> 
+            </div>
 
 
     <div> 
@@ -117,13 +159,13 @@
                 <!-- <h1 class="text-white text-lg mb-4">Menú de navegación</h1> -->
 
 
-                <div class="flex items-center mb-1 hover:scale-105 flex bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div class="flex items-center mb-1 hover:scale-105 flex bg-gradient-to-r from-violet-600 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
                     <div>
                         <img id="imagen-usuario" class="w-12 h-12 rounded-full me-4" src="./imagenes/user-logo.png" alt="img-amor-amarillo-disco">
                     </div>
                     <div class="p-1 ms-2">
                         <h2 id="nombreUsuario2" class="text-white text-md"><span class="fecha-album-listado"></span></h2>
-                        <h3 class="text-sky-500 text-xs">Tours y Tickets para Gustavo Cerati.</h3>
+                        <h3 class="text-white text-xs">Tours y Tickets para Gustavo Cerati.</h3>
                     </div>
                 </div>
 
@@ -284,67 +326,33 @@
            
         <!--CONTENIDO-->
             <section class="bg-neutral-950 h-screen xl:col-span-4 rounded-lg">
-                <div class="h-8 px-2 flex items-center justify-between">
-                    <div class="flex mb-3 gap-2">
-                        <a class="text-white cursor-pointer transition ease-in-out delay-25 hover:scale-125" href="/"> <img class="invert px-2 py-2 rounded-full bg-neutral-200 logo-plataforma5 w-7 h-7" src="./imagenes/flecha-izquierda.png" alt="logo-p5"></a>
-                        <a class="text-white cursor-pointer transition ease-in-out delay-25 hover:scale-125" href="/"> <img class="invert px-2 py-2 rounded-full bg-neutral-200 logo-plataforma5 w-7 h-7" src="./imagenes/flecha-derecha.png" alt="logo-p5"></a>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <h2 id="nombreUsuario" class="text-white me-2"></h2>
-                        <h2 id="edadUsuario" class="text-white"></h2>
-                        <img class="w-8 h-8 md:h-8 md:w-8 rounded-full ms-4 me-2 cursor-pointer" src="./imagenes/user-logo.png" alt="img-bocanada-disco">
-                    </div>
-                </div>
-
-                <div class="bg-[url('./imagenes/Cerati.jpeg')] flex flex-col justify-start bg-cover bg-neutral-900 h-72 bg-opacity-40">
-
-                    <!-- <div class="">
-                        <div class="flex flex-col md:flex-row justify-between px-4 py-2 bg-gradient-to-r from-transparent to-sky-900">
-                            <div class="mb-2 md:mb-0">
-                                <h1 class="font-bold text-center md:text-start text-4xl  md:text-5xl bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent ">Tours</h1>
-                            </div>
-                            <div class="flex items-center justify-center md:justify-start">
-                                <h3 class="text-md text-white"> <span>¡Hola <span id="nombreUsuario">Agustin!</span></span> Agregá nuevos tours para Gustavo Cerati <small class="text-xs"></small></h3>
-                                <img class="w-8 h-8 md:h-11 md:w-11 rounded-full ms-3 me-2" src="./imagenes/gustavo-cerati.webp" alt="img-bocanada-disco">
-                            </div>
-                        </div>
-                        
-                    </div> -->
-                    <div class="bg-black bg-opacity-60 mb-4">
-                        <div class="md:mb-0 p-1 bg-black bg-opacity-20">
-                            <h1 class="p-1 font-bold text-center md:text-start text-4xl md:text-5xl bg-gradient-to-r from-violet-800 to-violet-500 bg-clip-text text-transparent">Tours y Tickets</h1>
-                        </div>
-
-                        <div id="cartel-usuario" class="flex items-center mt-0 justify-center w-full">
-                            <h3 class="tracking-tighter text-2xl mt-14 md:mt-0 md:text-3xl text-white text-start p-4 md:px-6 md:py-1 w-full m-auto bg-black bg-opacity-40 md:bg-opacity-20"><span class="nombreUsuarioClass"></span>Reservá aquí tus tickets para Gustavo Cerati. <small class="text-xs"></small></h3>
-                        </div>
-
-                    </div>
-                        
-                       
-                    
-
-                    <!-- <button onClick="getTickets()" class="bg-red-400 text-white text-center md:text-start p-3Leo">
-                        AGREGAR
-                    </button> -->
-
-                    
-                </div>
-                
 
                 <!--REPRODUCTOR-->
                 <!--TITULO Y BOTONES REPRODUCTOR-->
-                <div class="bg-neutral-950">
-                    <div class="flex justify-between items-center">
+                <!-- <div>
+                </div> -->
+
+                <div class="flex justify-between items-start mt-5">
+                    <div class="">
+                        <h1 class="text-white font-normal text-5xl w-full">Tickets disponibles para conciertos.</h1>
+                        <h1 class="text-white p-2 text-2xl md:text-lg">Seleccióna un concierto y reserva tus entradad. (con inicio de sesión) <small></small></h1>
+                    </div>
+
+                    <div class="me-10 flex items-start gap-5">
                         <div>
-                            <h1 class="text-white p-2 text-2xl md:text-lg">Listado de servicios <small></small></h1>
+                            <button id="1" data-modal-target="staticModal" data-modal-toggle="staticModal" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-lg md:text-base text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">MODIFICAR CUPOS</button>
+                            <p id="alerta-sesion" class="text-white">(Con inicio de sesión)</p>
                         </div>
-                        <div class="flex">
-                            <img class="w-6 h-6 md:w-6 md:h-6 me-4 invert hover:invert-[.60] cursor-pointer transition ease-in-out delay-25 hover:scale-110" src="./imagenes/heart.png" alt="boton-favoritos">
-                            <img class="w-6 h-6 md:w-6 md:h-6 me-4 invert hover:invert-[.60] cursor-pointer transition ease-in-out delay-25 hover:scale-110" src="./imagenes/dots.png" alt="boton-compartir">
+                        <div>
+                            <button id="2" data-modal-target="staticModal1" data-modal-toggle="staticModal1" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xl md:text-xl text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
+                            <p id="alerta-sesion" class="text-white"></p>
                         </div>
                     </div>
-                
+                </div>
+
+
+                <div class="bg-neutral-950">
+
                 <!--"TABLE HEAD REPRODUCTOR"-->
                     <!-- <div class="w-full flex justify-between p-3">
                        <div class="flex -items-center">
@@ -366,10 +374,86 @@
                     </div>
                     <hr class="text-white"> -->
 
-                <!--TABLE BODY REPRODUCTOR-->   
+                <!--TABLE BODY REPRODUCTOR--> 
+                
+                
+    <div class="grid mt-5 grid-cols-1 md:grid-cols-3" id="display-data-conciertos"></div>
+        <!-- Main modal -->
+        <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <!-- <div class="relative w-full max-w-2xl max-h-full"> -->
+                <div class="relative w-4/12">
+                <!-- Modal content -->
+                <div class="relative bg-neutral-800 rounded-lg shadow dark:bg-neutral-800">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-white dark:text-white">
+                            Comprá tickets y descontalos en las cantidades.
+                        </h3>    
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-white rounded-lg text-lg w-8 h-8 ml-auto inline-flex justify-center items-center hover:bg-transparent dark:hover:text-white" data-modal-hide="staticModal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                            <form id="formulario-tickets" method="POST" class="flex flex-col px-6 mb-3">
+
+                                <label class="text-white text-md mt-3 mb-1 me-2" for="id">Ingresá la cantidad de tickets que buscás.</label>
+                                <input id="cantidad" name="cantidad" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" type="Number" placeholder="Ingresá la cantidad de tickets" required> 
+
+                                <label class="text-white text-md mt-3 mb-1 me-2" for="id">Id del álbum</label>
+                                <input id="id" name="id" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" type="text" placeholder="Ingresá el id del concierto" required> 
+                    
+                                <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
+                                    <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-transparent border-yellow-400 border-2 p-1 h-12 rounded-full transition ease-in-out delay-25 hover:scale-105">COMPRAR</button>
+                                </div>
+                    
+                            </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="staticModal1" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+     
+                <div class="relative w-4/12">
+
+                <div class="relative bg-neutral-800 rounded-lg shadow dark:bg-neutral-800">
+
+                    <div class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
+                        <h3 class="text-2xl font-semibold text-white dark:text-white">
+                            Ingresá el ID del concierto y adqurí tus tickets.
+                        </h3>
+                
+                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-white rounded-lg text-lg w-8 h-8 ml-auto inline-flex justify-center items-center hover:bg-transparent dark:hover:text-white" data-modal-hide="staticModal1">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+
+                            <form id="formulario-descuentocantidades" method="POST" class="flex flex-col px-6 mb-3">
+
+                                <label class="text-white text-md mt-3 mb-1 me-2" for="id">Id del álbum</label>
+                                <input id="id" name="id" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" type="text" placeholder="Ingresá el id del concierto" required> 
+                                
+                                <label class="text-white text-md mt-3 mb-1 me-2" for="cantidad">Ingresá la disponibilidad para ese concierto.</label>
+                                <input id="cantidad" name="cantidad" class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" min="0" type="number" placeholder="Ingresá la cantidad de tickets" required> 
+                    
+                                <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
+                                    <button type="submit" class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-transparent border-yellow-400 border-2 p-1 h-12 rounded-full transition ease-in-out delay-25 hover:scale-105">MODIFICAR</button>
+                                </div>
+                    
+                            </form>
+                </div>
+            </div>
+        </div>
+
+        </div>
                 
                     <!--Tour1 -->
-                    <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
+                    <!-- <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
                         <div class="flex">
                             <span class="text-white me-3 text-2xl">&#8226;</span>
                             <div class="flex items-center justify-between md:gap-10">
@@ -391,14 +475,14 @@
                         </div>
                         <div class="flex justify-between px-0">
                             <div>
-                                <button onClick="getTickets(6,'Estadio Obras Argentinas')" id="1" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
+                                <button onClick="getTickets(6,'Estadio Obras Argentinas')" id="1" data-modal-target="staticModal" data-modal-toggle="staticModal" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--Tour2-->
 
-                    <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
+                    <!-- <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
                         <div class="flex">
                             <span class="text-white me-3 text-2xl">&#8226;</span>
                             <div class="flex items-center justify-between md:gap-10">
@@ -420,15 +504,15 @@
                         </div>
                         <div class="flex justify-between px-0">
                             <div class="flex">
-                                <button onClick="getTickets(0,'Estadio Argentinos Juniors')" id="1" class="px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 text-sm bg-red-400 rounded transition ease-in-out delay-25 hover:scale-105">¡AGOTADO!</button>
+                                <button onClick="getTickets(0,'Estadio Argentinos Juniors')" id="1" data-modal-target="staticModal" data-modal-toggle="staticModal" class="px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 text-sm bg-red-400 rounded transition ease-in-out delay-25 hover:scale-105">¡AGOTADO!</button>
                             </div>
                         </div>
                     </div>
-                    
+                     -->
 
                    <!--Tour3-->
 
-                   <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
+                   <!-- <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
                     <div class="flex">
                         <span class="text-white me-3 text-2xl">&#8226;</span>
                         <div class="flex items-center justify-between md:gap-10">
@@ -450,14 +534,15 @@
                     </div>
                     <div class="flex justify-between px-0">
                         <div>
-                            <button onClick="getTickets(4,'Estadio único de Mar del Plata')" id="1" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
+                            <button onClick="getTickets(4,'Estadio único de Mar del Plata')" id="1" data-modal-target="staticModal" data-modal-toggle="staticModal" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
                         </div>
+
                     </div>
-                </div>
+                </div> -->
 
                  <!--Tour4-->
 
-                <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
+                <!-- <div class="w-full mb-2 flex gap-4 justify-between items-center px-1 md:px-5 py-3 bg-neutral-900 rounded hover:bg-neutral-800 transition ease-in-out delay-25 hover:bg-gray-700 border-r-sky-700">
                     <div class="flex">
                         <span class="text-white me-3 text-2xl">&#8226;</span>
                         <div class="flex items-center justify-between md:gap-10">
@@ -479,10 +564,12 @@
                     </div>
                     <div class="flex justify-between px-0">
                         <div>
-                            <button onClick="getTickets(5,'Estadio único de La Plata')" id="1" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
+                            <button onClick="getTickets(5,'Estadio único de La Plata')" id="1" data-modal-target="staticModal" data-modal-toggle="staticModal" class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xs md:text-md text-violet-900 hover:text-slate-600 text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR TICKETS!</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+        
 
 
                     <!--BOTON VER MAS-->
@@ -500,7 +587,54 @@
                     <img class="w-4/12 h-4/12 rounded" src="imagenes/bocanada1.webp" alt="arrow">
                     <img class="w-4/12 h-4/12 rounded" src="imagenes/bocanada4.webp" alt="arrow">
                     <img class="w-4/12 h-4/12 rounded" src="imagenes/bocanada1.webp" alt="arrow">
-                </div> -->
+                </div>
+
+                 <div class="h-8 px-2 flex items-center justify-between">
+                    <div class="flex mb-3 gap-2">
+                        <a class="text-white cursor-pointer transition ease-in-out delay-25 hover:scale-125" href="/"> <img class="invert px-2 py-2 rounded-full bg-neutral-200 logo-plataforma5 w-7 h-7" src="./imagenes/flecha-izquierda.png" alt="logo-p5"></a>
+                        <a class="text-white cursor-pointer transition ease-in-out delay-25 hover:scale-125" href="/"> <img class="invert px-2 py-2 rounded-full bg-neutral-200 logo-plataforma5 w-7 h-7" src="./imagenes/flecha-derecha.png" alt="logo-p5"></a>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <h2 id="nombreUsuario" class="text-white me-2"></h2>
+                        <h2 id="edadUsuario" class="text-white"></h2>
+                        <img class="w-8 h-8 md:h-8 md:w-8 rounded-full ms-4 me-2 cursor-pointer" src="./imagenes/user-logo.png" alt="img-bocanada-disco">
+                    </div>
+                </div>
+
+                <!-- <div class="bg-[url('./imagenes/Cerati.jpeg')] flex flex-col justify-start bg-cover bg-neutral-900 h-72 bg-opacity-40">
+
+                     <div class="">
+                        <div class="flex flex-col md:flex-row justify-between px-4 py-2 bg-gradient-to-r from-transparent to-sky-900">
+                            <div class="mb-2 md:mb-0">
+                                <h1 class="font-bold text-center md:text-start text-4xl  md:text-5xl bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent ">Tours</h1>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start">
+                                <h3 class="text-md text-white"> <span>¡Hola <span id="nombreUsuario">Agustin!</span></span> Agregá nuevos tours para Gustavo Cerati <small class="text-xs"></small></h3>
+                                <img class="w-8 h-8 md:h-11 md:w-11 rounded-full ms-3 me-2" src="./imagenes/gustavo-cerati.webp" alt="img-bocanada-disco">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="bg-black bg-opacity-60 mb-4">
+                        <div class="md:mb-0 p-1 bg-black bg-opacity-20">
+                            <h1 class="p-1 font-bold text-center md:text-start text-4xl md:text-5xl bg-gradient-to-r from-violet-800 to-violet-500 bg-clip-text text-transparent">Tours y Tickets</h1>
+                        </div>
+
+                        <div id="cartel-usuario" class="flex items-center mt-0 justify-center w-full">
+                            <h3 class="tracking-tighter text-2xl mt-14 md:mt-0 md:text-3xl text-white text-start p-4 md:px-6 md:py-1 w-full m-auto bg-black bg-opacity-40 md:bg-opacity-20"><span class="nombreUsuarioClass"></span>Reservá aquí tus tickets para Gustavo Cerati. <small class="text-xs"></small></h3>
+                        </div>
+
+                    </div>
+                        
+                       
+                    
+
+                    <!-- <button onClick="getTickets()" class="bg-red-400 text-white text-center md:text-start p-3Leo">
+                        AGREGAR
+                    </button> -->
+
+                    
+                </div>
                 
             </section>
         </div>
@@ -508,12 +642,30 @@
 
     <!--FOOTER-->
 
-    <div class="flex bg-neutral-900 justify-center items-center p-8 mt-10">         
+    <!-- <div class="flex bg-neutral-900 justify-center items-center p-8 mt-10">         
         <p class="text-white">Plataforma 5 - Proyecto Agustin Trezza</p>   
         <img class="w-12 h-12 ms-5 rounded" src="./imagenes/p5logo.jpeg" alt="logo-p5">  
-    </div>
+    </div> -->
 
-    <script type="module" src="/scripts/app.js" type="text/javascript"></script>
+    <script>
+
+        const user = JSON.parse(localStorage.getItem('userInfo'))
+        document.getElementById('container-cerrar-sesion').style.visibility = "hidden";
+        document.getElementById('logo-p5').style.display= 'none';
+
+        function cerrarSesion() {
+            console.log(user)
+            localStorage.removeItem('userInfo')
+            // document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
+            window.location.href = "../signin.html"
+        }
+
+        module.exports
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script type="module" src="/scripts/conciertos.js" type="text/javascript"></script>
    
 </body>
 </html>
