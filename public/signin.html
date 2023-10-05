@@ -24,46 +24,66 @@
 
 <body class="bg-neutral-950 border-box">
 
-    <!--HEADER MOBILE-->
+        <!--HEADER MOBILE-->
 
-    <div class="sticky xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
+        <div class="xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
 
-        <div class="flex justify-center py-3">
-            <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
-            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-        </div>
+            <div class="flex justify-center py-1">
+                <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
+                <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+            </div>
+        
+            <div class="w-full">
     
-        <div class="grid gap-2 grid-cols-2 w-full">
-
-            <div class="flex flex-col justify-center">
-                <a href="index.html" class="flex items-center justify-center mb-2">
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                    <h1 class="text-white text-2xl">album</h1>
-                </a>
-                <a href="signin.html" class="flex items-center justify-center">
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                    <h1 class="text-white text-2xl">signin</h1>
-                </a>
+                <div class="flex items-center justify-center gap-3">
+    
+                    <div>
+                        <a href="index.html" class="flex items-center justify-center">
+                            <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                            <h1 class="text-white text-xl">Album</h1>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <a href="signin.html" class="flex items-center justify-center">
+                            <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                            <h1 class="text-white text-xl">SignIn</h1>
+                        </a>
+                    </div>
+                    <button class="flex items-center justify-center p-1">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                            <div class="flex items-center justify-center">
+                                <h1 class="text-white text-center text-xl">AddAlbum</h1>
+                               <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                           </div>
+                        </a>
+                    </button>
+    
+                    <a class="flex items-center justify-center" href="./signup.html">
+                        <h1 class="text-white text-center text-xl">SignOut</h1> 
+                        <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                     </a>
+                     
+                </div>
+    
+                <!-- <div class="flex flex-col justify-center">
+                    <button class="flex items-center justify-center">
+                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
+                            <div class="flex items-center justify-center">
+                                <h1 class="text-white text-center text-2xl">AddAlbum</h1>
+                               <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
+                            <!-- </div>
+                        </a>
+                    </button> -->
+    
+                    <!-- <a class="flex items-center justify-center" href="./signup.html">
+                        <h1 class="text-white text-center text-2xl">SignOut</h1> -->
+                        <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
+                    <!-- </a>
+                </div> -->
+                
             </div>
-
-            <div class="flex flex-col justify-center">
-                <button class="flex items-center justify-start">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                        <div class="flex items-center justify-center">
-                            <h1 class="text-white text-start text-2xl">addAlbum</h1>
-                            <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                        </div>
-                    </a>
-                </button>
-
-                <a class="flex items-center justify-start" href="./signup.html">
-                    <h1 class="text-white text-2xl">signout</h1>
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                </a>
-            </div>
-            
         </div>
-    </div>
 
 
         <!--HEADER DESKTOP-->
@@ -157,29 +177,24 @@
                 </div>                
                 
             </div> 
-    </div>
-
-
-
-    <div> 
-
+        </div>
 
 
     <!--FORMULARIO-->
 
     <!-- <h1 id="nombre-usuario" class="text-white">Hola</h1> -->
 
-    <div class="grid h-full place-items-center px-7">
+    <div class="grid h-full place-items-center px-0 md:px-7 bg-neutral-950 mt-[96px] md:mt-[90px] xl:mt-[0px]">
 
-        <div class="mt-11 sm:w-10/12 md:w-10/12 lg:w-10/12 xl:w-4/12 2xl:w-4/12 2xl:px-6 rounded-3xl px-5 pt-6 pb-6">
+        <div class="mt-10 w-11/12 md:w-10/12 lg:w-10/12 xl:w-4/12 2xl:w-4/12 rounded-3xl pt-6 pb-6">
 
             <div class="mb-2">
-                <h1 class="font-bold text-center md:text-start text-3xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Iniciá Sesión</h1>
+                <h1 class="font-bold text-center md:text-start text-5xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Iniciá Sesión</h1>
                 <h1 class="text-slate-300 text-lg text-center md:text-start md:text-2xl font-bold">!Gracias por visitar mi proyecto!</h1>
             </div>
 
             <!-- action="https://formspree.io/f/xyyqebln" -->
-            <form id="formulario-login" method="POST" class="flex flex-col">
+            <form id="formulario-login" method="POST" class="flex flex-col w-full">
 
                 <label class="text-white text-base mt-2" for="email">Email</label>
                 <input id="email" name="email" class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
