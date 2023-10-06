@@ -8,181 +8,104 @@
     <link href="./styles.css" rel="stylesheet">
     <title>DiscoBocanada</title>
 </head>
-<body class="bg-neutral-950 border-box">
+    <body class="bg-neutral-950 border-box bg-neutral-950 mt-[80px] md:mt-[80px]">
 
 
-    <!--HEADER MOBILE-->
 
-    <div class="xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-neutral-800 lg:bg-opacity-75">
-
-        <div class="flex justify-center py-1">
-            <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
-            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-        </div>
-    
-        <div class="w-full">
-
-            <div class="flex items-center justify-center p-2 gap-3">
-
-                <div class="flex flex-col">
-
-                    <div class="flex gap-3 justify-center mb-1">
-                        <a href="index.html" class="flex items-center justify-center">
-                            <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                            <h1 class="text-indigo-600 underline text-xl">Album</h1>
-                        </a>
-                        <a href="signin.html" class="flex items-center justify-center">
-                            <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                            <h1 class="text-lg hover:text-indigo-600 text-white text-center text-xl">SignIn</h1>
-                        </a>
-                        <a href="signup.html" class="flex items-center justify-center">
-                            <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                            <h1 class="text-lg hover:text-indigo-600 text-white text-center text-xl">SignOut</h1>
-                        </a>
-                    </div>
-
-                    <div class="flex gap-3">
-                        <div class="flex gap-3">
-                            <a href="addalbum.html" class="flex items-center justify-center">
-                                <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                                <h1 class="text-lg hover:text-indigo-600 text-white text-center text-xl">AddAlbum</h1>
-                            </a>
-                            <a href="addalbum.html" class="flex items-center justify-center">
-                                <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                                <h1 class="text-lg hover:text-indigo-600 text-white text-center text-xl">Tours</h1>
-                            </a>
-                            <div class="flex items-center justify-center gap-3">
-                                <div>
-                                   <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
-                               </div>
-                           </div>
-                        </div>
-                            
-                     
-                        
-                    </div>
-                    
-                    
+    <nav class="bg-neutral-950 fixed w-full z-20 top-0 left-0 border-b border-gray-600 dark:border-gray-800">
+        <div class=" w-full flex flex-wrap items-center justify-between mx-auto px-4 py-1 md:py-3">
+        <a href="https://flowbite.com/" class="flex items-center">
+            <img class="logo-plataforma5 w-10 h-10 rounded ms-0 lg:ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+            <div  class="flex items-center altura">
+                    <div class="flex flex-col ms-3">
+                        <h2 class="font-thin text-white text-xl lg:text-2xl m-0 ">Proyecto Disco</h2>
+                        <h2 class="text-violet-500 text-ms">Agustin Trezza</h2>
+                        <!-- <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
+                     </div>
+                    <!-- <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5"> -->
                 </div>
+        </a>
 
-
+        <div class=" md:order-2 items-center">
+            <div id="2" class="flex clasee">
+                <div class="flex items-center clasee">
+                    <p class="text-white me-4" id="nombre-usuario"></p>
+                    <!-- <img class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco"> -->
+                    <img onclick=cerrarSesion() class="w-10 h-10 rounded-full me-4 cursor-pointer" src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                </div>
+                <div>
+                </div>
+                <!-- <button type="button" onclick=cerrarSesion() class="text-white bg-neutral-950 hover:bg-blue-800 focus:ring-4 me-3 focus:outline-none focus:ring-red-400 font-medium rounded-lg text-md px-4 py-3 text-center mr-3 md:mr-0 dark:bg-red-500 dark:hover:bg-red-700 dark:focus:ring-red-600">Cerrar sesión</button> -->
             </div>
-            
+            <div>
+                <a href="./signin.html" id="3" class="text-violet-400 hover:text-violet-600 font-thin text-xl"></a>
+            </div>
 
-            <!-- <div class="flex flex-col justify-center">
-                <button class="flex items-center justify-center">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                        <div class="flex items-center justify-center">
-                            <h1 class="text-white text-center text-2xl">AddAlbum</h1>
-                           <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                        <!-- </div>
-                    </a>
-                </button> -->
+            <div class="flexi p-2 md:p-0">
+                
+                <div id="4" class="">
+                    <img  onclick=cerrarSesion() class="w-10 h-10 rounded-full me-4 cursor-pointer md:hidden" src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                </div>
+                
+                <div>
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                      </button>
+                </div>
+                
+            </div>
 
-                <!-- <a class="flex items-center justify-center" href="./signup.html">
-                    <h1 class="text-white text-center text-2xl">SignOut</h1> -->
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                <!-- </a>
+            <!-- <div id="2" class="claseee">
+                <button type="button" onclick=cerrarSesion() class="text-white bg-neutral-950 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md px-4 py-3 text-center mr-3 md:mr-0 dark:bg-red-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cerrar Sesión</button>
             </div> -->
             
+          
         </div>
-    </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-950 md:flex-row space-x-3 lg:space-x-8 md:mt-0 md:border-0 md:neutral-950 dark:bg-neutral-950 md:dark:bg-neutral-950 dark:border-gray-700">
+            <li class="bg-neutral-950">
+              <a href="/" class="block py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded md:text-violet-700 md:p-0 md:dark:text-violet-500" aria-current="page">Álbum</a>
+            </li>
+            <li class="bg-neutral-950">
+              <a href="./addAlbum.html" class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">addAlbum</a>
+            </li>
+            <li class="bg-neutral-950">
+              <a href="./tours.html" class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tickets</a>
+            </li>
+            <li class="bg-neutral-950">
+              <a href="./signin.html" class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Iniciar sesión</a>
+            </li>
+            <li class="bg-neutral-950">
+                <a href="./signup.html" class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Crear sesión</a>
+            </li>
+          </ul>
+        </div>
+        </div>
 
-    <!--HEADER DESKTOP-->
+        <!-- <div>
 
-    <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-90 justify-between">
-            
-            
-
-            <div class="flex items-center justify-between altura-navegacion">
-
-                <div class="flex items-center" id="logo-p5">
-                    <div class="flex items-center ">
-                        <img class="logo-plataforma5 w-10 h-10 rounded me-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-                        <div class="flex flex-col">
-                            <!-- <h2 class="font-thin fuente text-white text-xl m-0">proyecto disco</h2> -->
-                            <h2 class="text-white text-lg font-thin fuente-subtitulo">Agustin Trezza - proyectoDisco</h2>
-                            <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2>
-                        </div>
-                    </div>
-                    
+            <div class="">
+            <div id="1" class="">
+                <div  class="flex items-center altura">
+                    <div class="flex flex-col">
+                        <h2 class="font-thin text-white fuente m-0 ">Curso Introductorio Fullstack</h2>
+                        <h2 class="text-violet-500 text-sm">Agustin Trezza</h2>
+                         <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
+                    <!-- </div>
+                    <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
                 </div>
+            </div>
+            </div>
+            -->
+            
+        </div> 
 
-                <div class="justify-start flex">
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                            <span class="text-indigo-600 underline text-lg xl:text-base hover:text-indigo-600">album</span>
-                        </a>
-                    </button>
-                    
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                            <span class="text-white text-lg hover:text-indigo-600 ">addAlbum</span>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login"> -->
-                            <h1 class="text-white text-lg hover:text-indigo-600">logIn</h1>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro"> -->
-                            <h1 class="text-white text-lg hover:text-indigo-600">resgistro</h1>
-                        </a>
-                    </button>
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro"> -->
-                            <h1 class="text-white text-lg hover:text-indigo-600">tours</h1>
-                        </a>
-                    </button>
-                    
-                </div>
-
-                
-                <div class="flex items-center">
-                    <div class="flex items-center" id="container-cerrar-sesion">
-                        <p class="text-white me-4" id="nombre-usuario"></p>
-                        <div>
-                            <img id="imagen-usuario" class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco">
-                        </div>
-                        <div>
-                            <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
-                        </div>
-                    </div>
-
-                    <!-- <div >
-                        <h2 class="font-thin text-white text-lg m-0">Curso Introductorio Fullstack</h2>
-                    </div> -->
-
-                    <div id="container-sin-sesion" class="flex justify-end items-center gap-12 ">
-                        <div>
-                            <a href="./signin.html" class="font-thin text-violet-500 text-lg me-5 hover:text-violet-600">Por favor! iniciá sesión</a>
-                        </div>
-
-                        <div class="flex items-center altura">
-                            <div class="flex flex-col">
-                                <h2 class="font-thin text-white fuente m-0 ">Curso Introductorio Fullstack</h2>
-                                <h2 class="text-white text-sm">Agustin Trezza</h2>
-                                <!-- <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
-                            </div>
-                            <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-                        </div>
-                        
-                    </div>
-                </div>                
-                
-            </div> 
-    </div>
-
-
-    <div> 
+        
+      </nav>
+      
 
 
     <!--SIDENAV-->
@@ -352,7 +275,7 @@
     
            
         <!--CONTENIDO-->
-            <section class="bg-neutral-950 mt-[130px] md:mt-[0px] h-screen xl:col-span-4 rounded-lg">
+            <section class=" h-screen xl:col-span-4 rounded-lg">
                
                 <div class="bg-[url('./imagenes/background-bocanada.png')] h-auto bg-neutral-900">
                 <!-- <div class="bg-[url('./imagenes/background-bocanada.png')] h-auto bg-neutral-900"> -->
@@ -427,7 +350,7 @@
                             </div>
                        </div>
                     </div>
-                    <hr class="text-white">
+                    <hr class="border-gray-600 mb-2">
 
                 <!--TABLE BODY REPRODUCTOR-->   
 
@@ -535,15 +458,20 @@
                         <img class="w-12 h-12 ms-5 rounded me-30" src="./imagenes/p5logo.jpeg" alt="logo-p5">  
                     </div>
 
+
+
+
                  </div>
 
                 
                 
             </section>
 
+            
 
             
         </div>
+
 
         
 
@@ -551,6 +479,32 @@
         
     </div>
 
+    <!-- <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-md font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer> -->
    
 
    
@@ -560,19 +514,37 @@
     <script>  
 
         const user = JSON.parse(localStorage.getItem('userInfo'))
-        document.getElementById('container-cerrar-sesion').style.visibility = "hidden" 
-        document.getElementById('logo-p5').style.display= 'none';
+        // document.getElementById('container-cerrar-sesion').style.visibility = "hidden";
+        // document.getElementById('logo-p5').style.display= 'none';
+        
 
-        console.log(user)
+
+        // console.log(user)
         if(user) {
                 console.log('hay usuario')
-                document.getElementById('logo-p5').style.display= 'block';
+                // document.getElementById('1').style.display = "none";
+                document.getElementById('2').style.display = "block";
+                document.getElementById('3').textContent = '';
+                document.getElementById('4').style.display = "block";
+                document.getElementById('nombre-usuario').textContent = user.nombre;
 
-                document.getElementById('alerta-sesion-canciones').style.display = "none"
-                document.getElementById('container-cerrar-sesion').style.visibility = "visible"
-                document.getElementById('container-sin-sesion').style.display = "none"
-                document.getElementById('nombre-usuario').textContent = user.email;
-            } 
+                // document.getElementById('logo-p5').style.display= 'block';
+
+                // document.getElementById('alerta-sesion').style.display = "block"
+                // document.getElementById('container-cerrar-sesion').style.display = "block"
+                // // document.getElementById('container-sin-sesion').style.display = "none"
+                
+            } else {
+                console.log('No hay usuario');
+                // document.getElementById('1').style.display = "block";
+                document.getElementById('2').style.display = "none";
+                document.getElementById('3').textContent = 'Login'
+                document.getElementById('4').style.display = "none";
+
+                // document.getElementById('3').innerHTML = <h1 class="text-white">Agus</h1>
+                
+
+            }
     
         function cerrarSesion() {
             console.log(user)

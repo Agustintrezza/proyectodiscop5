@@ -81,3 +81,23 @@ body {
 .margin-custom {
     margin-top: -20px;
 }
+
+
+
+@media(max-width: 767px) {
+    .clasee {
+        display: none!important;
+    }
+   
+}
+/* .claseex {
+    display: none;
+}
+@media(max-width:767px) {
+    .claseex {
+        display: block!important;
+    }
+} */
+.flexi {
+    display: flex!important;
+}
