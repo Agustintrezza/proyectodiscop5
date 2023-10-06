@@ -100,4 +100,5 @@ body {
 } */
 .flexi {
     display: flex!important;
+    align-items: center;
 }
