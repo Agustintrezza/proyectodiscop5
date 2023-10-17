@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,213 +12,155 @@
     <style>
         .sombra {
             border: 1px solid rgb(124, 146, 212);
-            -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
-            box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.75);
-            -webkit-box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+            -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 0px 0px 12px -1px rgba(120, 129, 255, 1);
             -moz-box-shadow: 0px 0px 12px -1px rgb(179, 184, 252);
-            box-shadow: 0px 0px 12px -1px rgba(120,129,255,1);
+            box-shadow: 0px 0px 12px -1px rgba(120, 129, 255, 1);
         }
     </style>
 </head>
 
 <body class="bg-neutral-950 border-box">
 
-           <!--HEADER MOBILE-->
 
-    <div class="xl:hidden fixed top-0 bg-black w-full p-2 z-10 bg-opacity-75">
-
-        <div class="flex justify-center py-1">
-            <h2 class="text-white font-thin text-2xl">proyecto disco - Agustin Trezza</h2>
-            <img class="logo-plataforma5 w-7 h-7 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-        </div>
-    
-        <div class="w-full">
-
-            <div class="flex items-center justify-center gap-3">
-
-                <div>
-                    <a href="index.html" class="flex items-center justify-center">
-                        <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                        <h1 class="text-white text-xl">Album</h1>
-                    </a>
+    <nav class="bg-neutral-950 fixed w-full z-20 top-0 left-0 border-b border-gray-600 dark:border-gray-800">
+        <div class=" w-full flex flex-wrap items-center justify-between mx-auto px-4 py-1 md:py-3">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img class="logo-plataforma5 w-10 h-10 rounded ms-0 lg:ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                <div class="flex items-center altura">
+                    <div class="flex flex-col ms-1">
+                        <h2 class="font-thin text-white text-xl lg:text-2xl m-0 ">Proyecto Disco</h2>
+                        <h2 class="text-violet-500 text-ms">Agustin Trezza</h2>
+                    </div>
                 </div>
-                
-                <div>
-                    <a href="signin.html" class="flex items-center justify-center">
-                        <!-- <img class="invert logo-plataforma5 w-7 h-7 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                        <h1 class="text-white text-xl">SignIn</h1>
-                    </a>
-                </div>
-                <button class="flex items-center justify-center p-1">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                        <div class="flex items-center justify-center">
-                            <h1 class="text-white text-center text-xl">AddAlbum</h1>
-                           <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                       </div>
-                    </a>
-                </button>
+            </a>
 
-                <a class="flex items-center justify-center" href="./signup.html">
-                    <h1 class="text-white text-center text-xl">SignOut</h1> 
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                 </a>
+            <div class=" md:order-2 items-center">
+                <div id="2" class="flex clasee">
+                    <div class="flex items-center clasee">
+                        <p class="text-white text-2xl me-4" id="nombre-usuario"></p>
+                        <img onclick=cerrarSesion() class="w-10 h-10 rounded-full me-4 cursor-pointer"
+                            src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                    </div>
+                    <div>
+                    </div>
+                </div>
+
+
+                <div class="flexi p-2 md:p-0">
+                    <div>
+                        <a href="./signin.html" id="3"
+                            class="text-violet-400 hover:text-violet-600 font-thin text-2xl"></a>
+                    </div>
+
+                    <div id="4" class="">
+                        <img onclick=cerrarSesion() class="w-10 h-10 rounded-full me-2 cursor-pointer md:hidden"
+                            src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                    </div>
+
+                    <div>
+                        <button data-collapse-toggle="navbar-sticky" type="button"
+                            class="ms-2 inline-flex items-center p-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
             </div>
 
-            <!-- <div class="flex flex-col justify-center">
-                <button class="flex items-center justify-center">
-                    <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                        <div class="flex items-center justify-center">
-                            <h1 class="text-white text-center text-2xl">AddAlbum</h1>
-                           <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                        <!-- </div>
-                    </a>
-                </button> -->
-
-                <!-- <a class="flex items-center justify-center" href="./signup.html">
-                    <h1 class="text-white text-center text-2xl">SignOut</h1> -->
-                    <!-- <img class="invert logo-plataforma5 w-7 h-7 ms-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                <!-- </a>
-            </div> -->
-            
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-950 md:flex-row space-x-3 lg:space-x-8 md:mt-0 md:border-0 md:neutral-950 dark:bg-neutral-950 md:dark:bg-neutral-950 dark:border-gray-700">
+                    <li class="bg-neutral-950">
+                        <a href="./index.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded md:p-0 md:dark:text-white"
+                            aria-current="page">Álbum</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./addAlbum.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">AddAlbum</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./tours.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tickets</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./signin.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Iniciar
+                            sesión</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./signup.html"
+                            class="block py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-violet-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Crear
+                            sesión</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
 
 
-        <!--HEADER DESKTOP-->
+    </nav>
 
-        <div class="sticky hidden xl:block top-0 z-10 bg-black w-full p-5 flex items-center bg-opacity-90 justify-between">
-        
-        
 
-            <div class="flex items-center justify-between altura-navegacion">
-    
-                <div class="flex items-center" id="logo-p5-registro">
-                    <div class="flex items-center ">
-                        <img class="logo-plataforma5 w-10 h-10 rounded me-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-                        <div class="flex flex-col">
-                            <!-- <h2 class="font-thin fuente text-white text-xl m-0">proyecto disco</h2> -->
-                            <h2 class="text-white text-lg font-thin fuente-subtitulo">Agustin Trezza - proyectoDisco</h2>
-                            <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2>
-                        </div>
-                    </div>
-                    
-                </div>
-    
-                <div class="justify-start flex">
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./index.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/cd.png" alt="logo-p5"> -->
-                            <span class="text-white text-lg hover:text-indigo-600">album</span>
-                        </a>
-                    </button>
-                    
-                    <button class="flex items-center justify-center me-7">
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./addAlbum.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-add-album.png" alt="add-album-icon"> -->
-                            <span class="text-white text-lg hover:text-indigo-600">addAlbum</span>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signin.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/login-icon.png" alt="icono-login"> -->
-                            <h1 class="text-white text-lg xl:text-base hover:text-indigo-600">logIn</h1>
-                        </a>
-                    </button>
-                    
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./signup.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/register-icon.png" alt="icono-registro"> -->
-                            <h1 class="text-indigo-600 underline text-lg hover:text-indigo-600">resgistro</h1>
-                        </a>
-                    </button>
-                    <button>
-                        <a class="flex ms-6 transition-all transition ease-in-out delay-400 duration-300 hover:underline" href="./tours.html">
-                            <!-- <img class="invert logo-plataforma5 w-5 h-5 me-2" src="./imagenes/icono-mundo.png" alt="icono-registro"> -->
-                            <h1 class="text-white text-lg hover:text-indigo-600">tours</h1>
-                        </a>
-                    </button>
-                    
-                </div>
-    
-                
-                <div class="flex items-center">
-                    <div class="flex items-center" id="container-cerrar-sesion-registro">
-                        <p class="text-white me-4" id="nombre-usuario"></p>
-                        <div>
-                            <img id="imagen-usuario" class="w-10 h-10 rounded-full me-4" src="./imagenes/perrito.png" alt="img-amor-amarillo-disco">
-                        </div>
-                        <div>
-                            <button onclick=cerrarSesion() class="text-white p-2 bg-red-500 rounded-sm me-4" >Cerrar Sesión</button>
-                        </div>
-                    </div>
-    
-                    <!-- <div >
-                        <h2 class="font-thin text-white text-lg m-0">Curso Introductorio Fullstack</h2>
-                    </div> -->
-    
-                    <div id="container-sin-sesion-registro" class="flex justify-end items-center gap-12 ">
-                        <!-- <div>
-                            <a href="./signin.html" class="font-thin text-violet-500 text-lg me-5 hover:text-violet-600">Por favor! iniciá sesión</a>
-                        </div> -->
-    
-                        <div class="flex items-center altura">
-                            <div class="flex flex-col">
-                                <h2 class="font-thin text-white fuente m-0 ">Curso Introductorio Fullstack</h2>
-                                <h2 class="text-white text-sm">Agustin Trezza</h2>
-                                <!-- <h2 class="text-violet-500 font-thin">¡Gracias por loguearte!</h2> -->
-                            </div>
-                            <img class="logo-plataforma5 w-10 h-10 rounded ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
-                        </div>
-                        
-                    </div>
-                </div>                
-                
-            </div> 
-    </div>
-    
-    
-    
-    <div> 
+
 
 
     <!--FORMULARIO-->
 
-    <div class="grid h-screen place-items-center p-4">
+    <div class="grid h-screen place-items-center p-4 mt-[-30px] md:mt-[20px]">
 
-        <div class="w-full sm:w-8/12 md:w-6/12 xl:w-4/12 lg:w-5/12 2xl:w-4/12 2xl:mb-40 2xl:px-6  px-5 py-4 lg:mb-20">
+        <div
+            class="w-full sm:w-8/12 md:w-6/12 xl:w-4/12 lg:w-5/12 2xl:w-4/12 2xl:mb-20 2xl:px-6  px-2 md:px-5 py-4 lg:mb-10">
 
-            <div class="">
-                <h1 class="font-bold text-center md:text-start text-3xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">Bienvenidx</h1>
-                <h1 class="text-slate-300 text-lg text-center md:text-start md:text-2xl font-bold">!Creá una cuenta y comenzá!</h1>
+            <div class="mb-6 md:mb-0">
+                <h1
+                    class="font-bold text-center md:text-start text-6xl md:text-5xl bg-gradient-to-r from-blue-600 to-violet-300 bg-clip-text text-transparent">
+                    Bienvenidx</h1>
+                <h1 class="text-slate-300 text-2xl text-center md:text-start md:text-2xl font-bold">!Creá una cuenta y
+                    comenzá!</h1>
             </div>
-
-            <!-- action="https://formspree.io/f/xyyqebln" -->
-            <form id="formulario-register"  method="POST" class="flex flex-col">
+            <form id="formulario-register" method="POST" class="flex flex-col">
 
                 <label class="text-white text-base mt-2" for="nombre">Nombre</label>
-                <input id="nombre" name="nombre" class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="nombre" type="text" name="nombreDeUsuario" placeholder="Ingresá tú nombre" required> 
+                <input id="nombre" name="nombre"
+                    class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none"
+                    id="nombre" type="text" name="nombreDeUsuario" placeholder="Ingresá tú nombre" required>
 
                 <label class="text-white text-base mt-2" for="apellido">Apellido</label>
-                <input id="apellido" name="apellido" class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="apellido" type="text" name="apellidoDeUsuario" placeholder="Ingresá tú apellido" required> 
+                <input id="apellido" name="apellido"
+                    class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none"
+                    id="apellido" type="text" name="apellidoDeUsuario" placeholder="Ingresá tú apellido" required>
 
                 <label class="text-white text-base mt-2" for="email">Email</label>
-                <input id="email" name="email" class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required> 
+                <input id="email" name="email"
+                    class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none"
+                    id="email" type="email" name="emailUsuario" placeholder="Ingresá una casilla de email" required>
 
                 <label class="text-white text-base mt-2" for="password" for="">Password</label>
-                <input id="contraseña" name="contraseña" class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none" id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
+                <input id="contraseña" name="contraseña"
+                    class="mt-1 bg-neutral-800 rounded-md p-1.5 text-white text-sm h-9 placeholder:text-sm focus-visible:outline-none"
+                    id="password" type="password" name="claveUsuario" placeholder="Ingresá tu password" required>
 
                 <div class="flex justify-center mt-6 mb-2 cursor-pointer">
-                    <button type="submit" class="cursor-pointer w-full h-10 text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 rounded-full transition ease-in-out delay-25 hover:scale-105">Registrarme</button>
-                </div>
-
-                <div class="flex justify-center my-2">
-                    <a class="text-white text-center h-10 flex justify-center items-center border-2 rounded-3xl p-1 rounded-full w-full transition ease-in-out delay-25 hover:scale-105 border-violet-500 hover:border-violet-500" href="/">Registrarme con Google <img class="w-5 h-5 md:w-6 md:h-6 ms-2" src="./imagenes/logo-google.png" alt="logo-google"> </a>
+                    <button type="submit"
+                        class="cursor-pointer w-full h-10 text-lg text-white bg-gradient-to-r from-blue-700 to-violet-500 p-1 rounded-full transition ease-in-out delay-25 hover:scale-105">Registrarme</button>
                 </div>
 
                 <div class="flex my-3 justify-center">
-                    <h3 class="text-white text-xl">Ya tengo una cuenta. <a class="text-violet-500 hover:text-violet-400 transition ease-in-out delay-25" href="/signin.html"><u>Iniciar Sesión.</u></a></h3>
+                    <h3 class="text-white text-xl">Ya tengo una cuenta. <a
+                            class="text-violet-500 hover:text-violet-400 transition ease-in-out delay-25"
+                            href="/signin.html"><u>Iniciar Sesión.</u></a></h3>
                 </div>
 
             </form>
@@ -226,48 +169,42 @@
 
     </div>
 
-
-    <script>  
-
-            const user = JSON.parse(localStorage.getItem('userInfo'))
-            document.getElementById('container-cerrar-sesion-registro').style.visibility = "hidden";
-            // document.getElementById('logo-p5').style.display= 'none';
-            document.getElementById('logo-p5-registro').style.display= 'none';
+    <!--FOOTER-->
+    <div class="flex w-full justify-center items-center p-5 mt-10 fixed bottom-0">
+        <p class="text-white text-lg">Curso Introductorio Fullstack - Plataforma 5 - Proyecto disco Agustin Trezza</p>
+        <img class="w-12 h-12 ms-5 rounded" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+    </div>
 
 
+    <script>
 
+        const user = JSON.parse(localStorage.getItem('userInfo'))
+        if (user) {
+            document.getElementById('2').style.display = "block";
+            document.getElementById('3').textContent = '';
+            document.getElementById('4').style.display = "block";
+            document.getElementById('nombre-usuario').textContent = user.nombre;
+
+        } else {
+            document.getElementById('2').style.display = "none";
+            document.getElementById('3').textContent = 'Login'
+            document.getElementById('4').style.display = "none";
+        }
+
+        function cerrarSesion() {
             console.log(user)
-            if(user) {
-                    console.log('hay usuario')
-                    // document.getElementById('logo-p5').style.display= 'block';
-                    document.getElementById('logo-p5-registro').style.display= 'block';
-
-                    // document.getElementById('alerta-sesion').style.display = "none"
-
-                    // document.getElementById('container-cerrar-sesion').style.visibility = "visible"
-                    document.getElementById('container-cerrar-sesion-registro').style.visibility = "visible"
-
-                    // document.getElementById('container-sin-sesion').style.display = "none"
-                    document.getElementById('container-sin-sesion-registro').style.display = "none"
-
-                    document.getElementById('nombre-usuario').textContent = user.email;
-                } 
-
-            function cerrarSesion() {
-                console.log(user)
-                localStorage.removeItem('userInfo')
-                // document.getElementById('container-cerrar-sesion').style.visibility = "hidden"
-                window.location.href = "../signin.html"
-            }
-
-
+            localStorage.removeItem('userInfo')
+            window.location.href = "../signin.html"
+        }
 
         module.exports
 
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./scripts//signup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script type="module" src="./scripts/signup.js"></script>
 
 </body>
+
 </html>

@@ -1,97 +1,97 @@
 //EVENTO AL HACER SUBMIT AL FORMULARIO
-const formulario = document.getElementById('formulario-cancion');
-formulario.addEventListener('submit', function (e) {
-    e.preventDefault()
-    console.log('entra')
-    getInputValues()
-})
+const formulario = document.getElementById("formulario-cancion");
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("entra");
+  getInputValues();
+});
 
 // //RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
 function getInputValues() {
-    const valoresFormulario = new FormData(formulario)
-    const objectToSend = Object.fromEntries(valoresFormulario);
-    console.log(objectToSend);
-    return addCancion(objectToSend)
+  const valoresFormulario = new FormData(formulario);
+  const objectToSend = Object.fromEntries(valoresFormulario);
+  console.log(objectToSend);
+  return addCancion(objectToSend);
 }
 
 // CREÁ UNA CANCIÓN
 async function addCancion(objectToSend) {
-    
-     try {
-        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-        const token = userInfo.token || null
-        console.log(token);
-        console.log(objectToSend)
+  try {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    const token = userInfo.token || null;
+    console.log(token);
+    console.log(objectToSend);
 
-        if(userInfo) {
-           await axios.post("/canciones/crearcancion", objectToSend,
-        {
-            headers: {
-                authorization: `Bearer ${token}`,
-            }
-        })
+    if(objectToSend.duracion !== '^(?:([01]?\d|2[0-3]):([0-5]?\d):)?([0-5]?\d)$' ) {
+      swal({
+        title: "Formato inválido",
+        text: "La duración debe contener 5 caracteres, '00:00'. Minutos y segudnos. Usando cero cuando sea necesario ",
+        icon: "warning",
+      });
+      return
+    } else {
+      if (userInfo) {
+        await axios.post("/canciones/crearcancion", objectToSend, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        });
         swal({
           title: "Success!",
           text: "Cancion agregada exitosamente al álbum",
           icon: "success",
-          // confirmButtonText: "Ok",
         });
         setTimeout(() => {
-          location.reload()
+          location.reload();
         }, 2000);
-        // redireccionar a home 
-        }
-        
-      } catch (error) {
-        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-        if(!userInfo) {
-            swal({
-                title: "¡Debes iniciar sesión!",
-                text: "Para agregar canciones es necesario iniciar sesión!",
-                icon: "warning",
-                // confirmButtonText: "Ok",
-              });
-        } else {
-            swal({
-                title: "¡Revisá bien los datos ingresados!",
-                text: "Todos los campos son requeridos, revisá que no haya errores.",
-                icon: "warning",
-                confirmButtonText: "Ok",
-              });
-        }
-        console.log('entra en el error');
-        // alerta en caso de error
       }
-}
+    }
 
+   
+  } catch (error) {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo) {
+      swal({
+        title: "¡Debes iniciar sesión!",
+        text: "Para agregar canciones es necesario iniciar sesión!",
+        icon: "warning",
+      });
+    } else {
+      swal({
+        title: "¡Revisá bien los datos ingresados!",
+        text: "Todos los campos son requeridos, revisá que no haya errores.",
+        icon: "warning",
+        confirmButtonText: "Ok",
+      });
+    }
+    console.log("entra en el error");
+  }
+}
 
 // TRAE LA INFO DE LOS ALBUMES
 async function obtenerCanciones(req, res) {
-    
   try {
-      const data = await axios.get("/canciones/vertodaslascanciones", 
-      // {
-      //     headers: {
-      //         authorization: `Bearer ${token}`,
-      //     }
-      // }
-       );
-       console.log(data.data.length)
-       const cantCanciones = data.data.length;
+    const data = await axios.get("/canciones/vertodaslascanciones");
+    const cantCanciones = data.data.length;
 
-       if(cantCanciones == 1) {
-        document.getElementById('cant-canciones').textContent = `(${cantCanciones} canción)`
-       } else if (cantCanciones == 0) {
-        document.getElementById('cant-canciones').textContent = `Argregá la primer canción al álbum`
-       } else {
-        document.getElementById('cant-canciones').textContent = `(${cantCanciones} canciones)`
-       }
-
-      return data.data       
-    } catch (error) {
-      console.log('entra en el error');
-      // alerta en caso de error
+    if (cantCanciones == 1) {
+      document.getElementById(
+        "cant-canciones"
+      ).textContent = `(${cantCanciones} canción)`;
+    } else if (cantCanciones == 0) {
+      document.getElementById(
+        "cant-canciones"
+      ).textContent = `Argregá la primer canción al álbum`;
+    } else {
+      document.getElementById(
+        "cant-canciones"
+      ).textContent = `(${cantCanciones} canciones)`;
     }
+
+    return data.data;
+  } catch (error) {
+    console.log("entra en el error");
+  }
 }
 obtenerCanciones();
 
@@ -100,8 +100,9 @@ const display = document.querySelector("#display-data");
 const mostrarData = async () => {
   const payload = await obtenerCanciones();
 
-  let displayData = payload.map((object, index) => {
-      const {titulo, duracion, _id} = object;
+  let displayData = payload
+    .map((object, index) => {
+      const { titulo, duracion, _id } = object;
       const indice = index;
 
       return `
@@ -110,7 +111,7 @@ const mostrarData = async () => {
             
                   <div class="flex justify-between items-center gap-6">
                       <div>
-                        <p class="text-white">${indice + 1 }</p>
+                        <p class="text-white">${indice + 1}</p>
                       </div>
                       <div>
                         <p class="text-white text-xl">${titulo}</p>
@@ -131,80 +132,87 @@ const mostrarData = async () => {
               </div>
 
             
-      `
-  }).join("");
+      `;
+    })
+    .join("");
 
   display.innerHTML = displayData;
-}   
+};
 mostrarData();
 
-
 //EVENTO AL HACER SUBMIT AL FORMULARIO
-const formularioEliminar = document.getElementById('formulario-eliminar-cancion');
-formularioEliminar.addEventListener('submit', function (e) {
-    e.preventDefault()
-    getInputValues2()
-})
+const formularioEliminar = document.getElementById(
+  "formulario-eliminar-cancion"
+);
+formularioEliminar.addEventListener("submit", function (e) {
+  e.preventDefault();
+  getInputValues2();
+});
 
 //RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
 function getInputValues2() {
-    const valoresFormulario = new FormData(formularioEliminar)
-    const objectToSend2 = Object.fromEntries(valoresFormulario);
-    const id = objectToSend2.id
-    return eliminarCancion(id)
+  const valoresFormulario = new FormData(formularioEliminar);
+  const objectToSend2 = Object.fromEntries(valoresFormulario);
+  const id = objectToSend2.id;
+  return eliminarCancion(id);
 }
 
-const id = document.getElementById('boton-eliminar');
-console.log(id);
+const id = document.getElementById("boton-eliminar");
 
 // ELIMINA UNA CANCION POR ID
-     async function eliminarCancion(id) {
-        console.log('Elimina', id, )
+async function eliminarCancion(id) {
+  console.log("Elimina", id);
 
-        if (window.confirm('Estás seguro que querés eliminar esta canción?')) {
-
-            try {
-                const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-                const token = userInfo.token || null
-
-                const data = await axios.delete(`/canciones/eliminarcancion/${id}`, 
-                {
-                  headers: {
-                      authorization: `Bearer ${token}`,
-                  }
-                });
-                 swal({
-                    title: "La canción fue eliminada correctamente!",
-                    // text: "El álbum fue eliminado correctamente!",
-                    icon: "success",
-                    // confirmButtonText: "Ok",
-                  });
-                  setTimeout(() => {
-                    location.reload()
-                  }, 2000);
-                  
-                 console.log(data)
-                // return data.data.albums        
-              } catch (error) {
-                const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-                if(!userInfo) {
-                    swal({
-                        title: "¡Debes iniciar sesión!",
-                        text: "Tienes que iniciar sesión para eliminar canciones.",
-                        icon: "warning",
-                        confirmButtonText: "Ok",
-                      });
-                } else {
-                    swal({
-                        title: "¡No existe ningúna canción con ese ID!",
-                        text: "Revisá tu id, no existe ningúna canción en este disco con ese ID.",
-                        icon: "warning",
-                        confirmButtonText: "Ok",
-                      });
-                }
-                console.log('entra en el error');
-
-              }
+  if(id.length != 24) {
+    swal({
+      title: "¡El ID debe contener 24 caracteres y ser de fromato ID!",
+      text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
+      icon: "warning",
+      confirmButtonText: "Ok",
+    });
+    return
+  } else {
+    if (window.confirm("Estás seguro que querés eliminar esta canción?")) {
+      try {
+        const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        const token = userInfo.token || null;
+  
+        const data = await axios.delete(`/canciones/eliminarcancion/${id}`, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        });
+        swal({
+          title: "'¡La canción fue eliminada correctamente del álbum!",
+          icon: "success",
+        });
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
+  
+        console.log(data);
+      } catch (error) {
+        const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+        if (!userInfo) {
+          swal({
+            title: "¡Debes iniciar sesión!",
+            text: "Tienes que iniciar sesión para eliminar canciones.",
+            icon: "warning",
+            confirmButtonText: "Ok",
+          });
+        } else {
+          swal({
+            title: "¡No existe ningúna canción con ese ID!",
+            text: "Revisá el id, no existe ningúna canción en este disco con ese ID.",
+            icon: "warning",
+            confirmButtonText: "Ok",
+          });
         }
-        
+        console.log("entra en el error");
+      }
     }
+
+  }
+
+  
+}
