@@ -2,23 +2,28 @@
 
 ### Mi nombre es Agustin Trezza, y este es mi proyecto final del curso introductorio fullstack de Plataforma 5. Año 2023.
 
-\
+
+## PASOS PARA EJECUTAR EL PROYECTO
+
+* 1 -  Descargar la carpeta del repositorio de Github aquí ().
+* 2 - Abrir la carpeta con Visual Studio Code.
+* 3 - Posicionarse usando la terminal, dentro de la carpeta del proyecto y  ejecutar el comando _**"npm install"**_ para instalar módulos de Node.
+* 4 - Luego ejecutar _**"npm start"**_, para correr el proyecto.
 
 ## BREVE DECRIPCIÓN DEL PROYECTO
 
- 
 El proyecto es una aplicación fullstack, hecha con las tecnologías y herramientas vistas a lo largo del curso (JavaScript, HTML5, CSS3, Node, MongoDb, Express, JWToken, Tailwind, Github, Render). 
 El mismo está enfocado en una aplicación musical, en donde el usuario podrá, ver la portada de un artista, ver los álbums agregados con toda su información. También, ver fechas de conciertos próximos con su información y disponibilidades de cupos.
  
 
 **El usuario podrá y deberá, crear una cuenta e iniciar sesión en ella para poder: ver, subir y eliminar sus álbums musicales, agregar y eliminar canciones a un álbum, ver fechas para conciertos, modificar el cupo de los mismos y adquirir tickets.**
 
-\
+
 ## FUNCIONALIDADES Y ESTRUCTURA
 
 EL PROYECTOS PODRÍAMOS SEPARARLO EN:  **FRONTEND, BACKEND, GENERALES Y DEPLOY**.
 
-\
+
 ### **FRONTEND:**(5 landings: /, /addalbum, /tours, /signin, /signup).
 
 _**/ (Home del álmun)**_ : Se armo y dió estilos al contenido del álbum "Bocanada", con HTML, Talwind, Javascript y CSS. Está parte del sitio muestra las canciones del álbum, permite sólo si el usuario inicia sesión, agregar y eliminar canciones al álbum a través de formularios con validaciones.
@@ -44,7 +49,7 @@ Los archivos de esta sección del sitio son: **public/signup.html y public/scrip
 **RECURSOS DEL FRONTEND:**
 Imágenes, iconos y logos del proyecto en dentro de las carpetas **public/imagenes y public/imagenesBocanada**.
 
-\
+
 
 ### **BACKEND (SERVIDOR Y BASE)**
 
@@ -57,7 +62,7 @@ Se modelan y definen las estructuras para almacenar la información en la aplica
 _**Carpeta "Routes"_**
 Se crean utilizando Express, las rutas de la aplicación, donde a través de estas, aplicamos la lógica necesaria para almacenar la información en la base de datos.
 
-\
+
 
 ### **GENERALES**
 
@@ -73,7 +78,7 @@ Se excluyen todos los documentos y archivos que no queremos subir a nuestro repo
 _**package.json**_
 Se pueden ver todas las dependencias que utilizamos, se define script de inicio.
 
-\
+
 
 ### **DEPLOY**
 
@@ -81,14 +86,7 @@ El deploy de la aplicación está hecho en RENDER.
 
 * Para utilizar MONGODB usamos MondoDb Atlas. El repositorio del proyecto lo creamos y subimos en GITHUB. La aplicación la hicimos usando Visual Studio Code.
 
-\
 
-## PASOS PARA EJECUTAR EL PROYECTO
-
-* 1 -  Descargar la carpeta del repositorio de Github aquí ().
-* 2 - Abrir la carpeta con Visual Studio Code.
-* 3 - Posicionarse usando la terminal, dentro de la carpeta del proyecto y  ejecutar el comando _**"npm install"**_ para instalar módulos de Node.
-* 4 - Luego ejecutar _**"npm start"**_, para correr el proyecto.
 
 ## AGRADECIMIENTOS
 
