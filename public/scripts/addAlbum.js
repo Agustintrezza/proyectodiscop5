@@ -71,8 +71,8 @@ async function addAlbum(objectToSend) {
     if (userInfo) {
       if(objectToSend.descripcion.length < 5 || objectToSend.descripcion.length > 200) {
         swal({
-          title: "La descripción debe contener entre 5 y 200 caracteres",
-          text: "Para crear albumes es necesario iniciar sesión!",
+          title: "LA DESCRIPCIÓN DEBE CONTENER ENTRE 5 Y 200 CARACTERES",
+          text: "Para crear albumes es necesario iniciar sesión.",
           icon: "warning",
           confirmButtonText: "Ok",
         });
@@ -84,8 +84,8 @@ async function addAlbum(objectToSend) {
           },
         });
         swal({
-          title: "Success!",
-          text: "Album added to the collection!",
+          title: "SE AGREGÓ LA CANCIÓN AL ALBUM",
+          text: "Se agrego correctamente la canción.",
           icon: "success",
           confirmButtonText: "Ok",
         });
@@ -99,14 +99,14 @@ async function addAlbum(objectToSend) {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (!userInfo) {
       swal({
-        title: "¡Debes iniciar sesión!",
-        text: "Para crear albumes es necesario iniciar sesión!",
+        title: "DEBES INICIAR SESIÓN",
+        text: "Para crear albumes es necesario iniciar sesión.",
         icon: "warning",
         confirmButtonText: "Ok",
       });
     } else {
       swal({
-        title: "¡Revisá bien los datos ingresados!",
+        title: "REVISÁ BIEN LOS DATOS INGRESADOS",
         text: "Todos los campos son requeridos, revisá que no haya errores.",
         icon: "warning",
         confirmButtonText: "Ok",
@@ -133,18 +133,17 @@ function getInputValues2() {
 
 // ELIMINA UN ÁLBUM POR ID
 async function eliminarAlbum(id) {
-  // console.log("Elimina", id);
 
   if(id.length != 24) {
     swal({
-      title: "¡El ID debe contener 24 caracteres y ser de fromato ID!",
+      title: "EL ID DEBE CONTENER 24 CARACTERES Y SER FORMATO ID",
       text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
       icon: "warning",
       confirmButtonText: "Ok",
     });
     return
   } else {
-    if (window.confirm("Estás seguro que querés eliminar el álbum?")) {
+    if (window.confirm("¿Éstas segurx que querés eliminar este álbum?")) {
       try {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         const token = userInfo.token || null;
@@ -155,7 +154,7 @@ async function eliminarAlbum(id) {
           },
         });
         swal({
-          title: "El álbum fue eliminado correctamente!",
+          title: "EL ÁLBUM FUE ELIMINADO CORRECTAMENTE",
           icon: "success",
         });
         setTimeout(() => {
@@ -166,14 +165,14 @@ async function eliminarAlbum(id) {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         if (!userInfo) {
           swal({
-            title: "¡Debes iniciar sesión!",
+            title: "DEBES INICIAR SESIÓN",
             text: "Tienes que iniciar sesión para eliminar álbumes.",
             icon: "warning",
             confirmButtonText: "Ok",
           });
         } else {
           swal({
-            title: "¡No existe ningún álbum con ese ID!",
+            title: "NO EXISTE NINGUN ÁLBUM CON ESE ID",
             text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
             icon: "warning",
             confirmButtonText: "Ok",

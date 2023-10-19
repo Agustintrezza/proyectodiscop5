@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./styles.css" rel="stylesheet">
+    <title>Portada - P5 Proyecto Final - Agustin Trezza.</title>
+</head>
+
+<body class="bg-neutral-950 border-box bg-neutral-950 mt-[80px] md:mt-[80px]">
+
+    <!-- HEADER -->
+
+    <nav class="bg-neutral-950 fixed w-full z-20 top-0 left-0 border-b border-gray-600 dark:border-gray-800">
+        <div class=" w-full flex flex-wrap items-center justify-between mx-auto px-4 py-1 md:py-3">
+            <a href="https://flowbite.com/" class="flex items-center">
+                <img class="logo-plataforma5 w-10 h-10 rounded ms-0 lg:ms-3" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                <div class="flex items-center altura">
+                    <div class="flex flex-col ms-1">
+                        <h2 class="font-thin text-white text-xl lg:text-2xl m-0 ">Proyecto Disco</h2>
+                        <h2 class="text-violet-500 text-ms">Agustin Trezza</h2>
+                    </div>
+                </div>
+            </a>
+
+            <div class=" md:order-2 items-center">
+                <div id="2" class="flex clasee">
+                    <div class="flex items-center clasee">
+                        <p class="text-white text-2xl me-4" id="nombre-usuario"></p>
+                        <img onclick=cerrarSesion() class="w-10 h-10 rounded-full me-4 cursor-pointer"
+                            src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                    </div>
+                    <div>
+                    </div>
+                </div>
+
+
+                <div class="flexi p-2 md:p-0">
+                    <div>
+                        <a href="./signin.html" id="3"
+                            class="text-violet-400 hover:text-violet-600 font-thin text-2xl"></a>
+                    </div>
+
+                    <div id="4" class="">
+                        <img onclick=cerrarSesion() class="w-10 h-10 rounded-full me-2 cursor-pointer md:hidden"
+                            src="./imagenes/cerrar-sesion.png" alt="logo-cerrar-sesion">
+                    </div>
+
+                    <div>
+                        <button data-collapse-toggle="navbar-sticky" type="button"
+                            class="ms-2 inline-flex items-center p-0 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-950 md:flex-row space-x-3 lg:space-x-8 md:mt-0 md:border-0 md:neutral-950 dark:bg-neutral-950 md:dark:bg-neutral-950 dark:border-gray-700">
+                    <li class="bg-neutral-950">
+                        <a href="/"
+                            class="block text-xl py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded md:text-violet-700 md:p-0 md:dark:text-violet-500"
+                            aria-current="page">Álbum</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./addAlbum.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">AddAlbum</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./tours.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tickets</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./signin.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Iniciar
+                            sesión</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./signup.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Crear
+                            cuenta</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./index.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Intro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+
+
+    </nav>
+
+
+
+    <!--SIDENAV-->
+
+    <div class="grid xl:grid-cols-5 xl:h-full gap-3 p-2.5 gap-2">
+
+        <section class="bg-neutral-900 h-full rounded p-2 hidden xl:block">
+
+            <h1 class="text-white text-lg mb-4">Discografía</h1>
+
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded me-2" src="./imagenes/amor-amarillo.webp"
+                        alt="img-amor-amarillo-disco">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Amor Amarillo <span class="fecha-album-listado">(1993)</span></h2>
+                    <h3 class="text-sky-500 text-xs">11 canciones - 54 min</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded me-2" src="./imagenes/bocanada1.webp" alt="img-bocanada-disco">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Bocanada <span class="fecha-album-listado">(1999)</span></h2>
+                    <h3 class="text-sky-500 text-xs">15 canciones - 1h 19min</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded me-2" src="./imagenes/siempre-es-hoy.webp" alt="logo-p5">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Siempre es hoy <span class="fecha-album-listado">(2002)</span></h2>
+                    <h3 class="text-sky-500 text-xs">17 canciones - 1h 10min</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded me-2" src="./imagenes/ahi-vamos.webp" alt="logo-p5">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Ahí Vamos <span class="fecha-album-listado">(2006)</span></h2>
+                    <h3 class="text-sky-500 text-xs">13 canciones - 56min</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded me-2" src="./imagenes/fuerza-natural.webp" alt="logo-p5">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Fuerza Natural <span class="fecha-album-listado">(2009)</span></h2>
+                    <h3 class="text-sky-500 text-xs">14 canciones - 56min</h3>
+                </div>
+            </div>
+
+            <br>
+
+            <!--SIDENAV VIDEO YOUTUBE-->
+
+            <div class="p-4 bg-neutral-900 cursor-pointer">
+                <img class="w-full h-full rounded me-2 cursor-pointer" src="./imagenes/siempre-es-hoy.webp"
+                    alt="episodios-sinfonicos">
+
+                <div class="flex flex-col">
+                    <h2 class="text-white text-center text-md cursor-pointer">Disco Recomendado</h2>
+
+                    <h2 class="text-white text-center text-md mb-1 cursor-pointer">Siempre es Hoy</h2>
+                    <div class="flex justify-center">
+                        <img class="w-8 h-6 md:w-8 md:h-6 md:me-4 cursor-pointer transition ease-in-out delay-25 hover:scale-110"
+                            src="./imagenes/youtube-logo.png" alt="boton-escuchar-en-youtube">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="p-4">
+                <div>
+                    <h2 class="text-white text-lg mb-4">Músicos</h2>
+                    <ul>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Flavio Etcheto</strong> |
+                            Teclados, Sinte, trompeta.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Leo García</strong> |
+                            Guitarras, teclados.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Martín Carrizo</strong> |
+                            Batería.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Fernando Nalé</strong> | Bajo.
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <h2 class="text-white text-lg mb-4">Producción</h2>
+                    <ul>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Gaby Herbstein</strong>|
+                            Forografía. </li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Sofía Temperley</strong>|
+                            Dirección de diseño: ROS.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">The Townhouse, Londres
+                            </strong>| Edición y Mastering.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Barry Woodward</strong>|
+                            Editor.</li>
+                        <li class="text-neutral-400 list-disc"><strong class="text-white">Bunt Stafford-Clark </strong>|
+                            Mastering.</li>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+
+
+            <h1 class="text-white text-lg mb-4">Otros Artistas</h1>
+
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded-full me-2" src="https://i.scdn.co/image/ab67616100005174e1988a1a730ae50728967a16"
+                        alt="img-amor-amarillo-disco">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Luis Alberto Spinetta<span class="fecha-album-listado"></span></h2>
+                    <h3 class="text-green-300 text-xs">10 álbums (Rok, Pop, Argentina)</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded-full me-2" src="https://imgix.ranker.com/user_node_img/50040/1000793307/original/young-madonna-in-black-tank-top-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375" alt="img-bocanada-disco">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Madonna <span class="fecha-album-listado"></span></h2>
+                    <h3 class="text-green-300 text-xs">4 álbums (Pop)</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded-full me-2" src="https://durevie.paris/wp-content/uploads/sites/7/2023/02/6052dc4d28ef499a8b714d73151de889.png" alt="logo-p5">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Daft Punk <span class="fecha-album-listado"></span></h2>
+                    <h3 class="text-green-300 text-xs">11 álbums (Electronic-pop)</h3>
+                </div>
+            </div>
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded-full me-2" src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1149694614-copy.jpg" alt="img-bocanada-disco">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">John Coltrae <span class="fecha-album-listado"></span></h2>
+                    <h3 class="text-green-300 text-xs">13 álbums (Jazz Icons)</h3>
+                </div>
+            </div>
+
+            <div
+                class="mb-1 hover:scale-105 flex hover:bg-gradient-to-r from-sky-800 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
+                <div>
+                    <img class="w-12 h-12 rounded-full me-2" src="https://media.gettyimages.com/id/84843312/sv/foto/american-trumpeter-and-composer-miles-davis-performing-live-on-stage-at-the-newport-jazz.jpg?s=612x612&w=gi&k=20&c=AeDXiPMrEojrG8VED2yWUSftPo_UKf4bwo-fCVOyODM=" alt="logo-p5">
+                </div>
+                <div class="p-1">
+                    <h2 class="text-white text-sm">Miles Davis <span class="fecha-album-listado"></span></h2>
+                    <h3 class="text-green-300 text-xs">17 álbums (Jazz)</h3>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!--CONTENIDO-->
+
+        <section class=" h-screen xl:col-span-4 rounded-lg">
+
+            <div class="bg-[url('./imagenes/background-bocanada.png')] h-auto bg-neutral-900">
+
+                <div class="">
+                    <div
+                        class="flex flex-col md:flex-row justify-between px-4 py-2 bg-gradient-to-r from-transparent to-sky-900">
+                        <div class="mb-2 md:mb-0">
+                            <h1
+                                class="font-bold text-center md:text-start text-6xl md:text-6xl bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent ">
+                                Bocanada</h1>
+                        </div>
+
+                    </div>
+                    <p
+                        class="text-white bg-black-custom py-4 text-lg font-extralight text-center md:text-start p-3 py-2">
+                        Bocanada es el segundo álbum de estudio solista del músico argentino
+                        Gustavo Cerati. <strong>Fue publicado el 28 de junio de 1999</strong> a
+                        través del sello discográfico BMG ARIOLA, recibiendo excelentes críticas
+                        por la prensa especializada cómo de sú público y en general.
+                        Este disco es considerados por muchos, como el mejor de la carrera
+                        solista del artista y un disco muy distintivo y de gran aporte para la
+                        música popular moderna argentina.
+                        Fué certificado como disco de platino por vender más de 60 mil copias en
+                        los primeros meses en Argentina. Fue grabado en el estudio CASA SUBMARINA.
+
+                        <em class="text-white">En este disco, Gustavo Cerati hace un giro total hacia la música
+                            electrónica</em>, sumada al buen gusto del pop y el rock qué
+                        caracterizaron al artista, hacen de Bocanada una obra tan indispensable cómo recomendada.
+
+                    </p>
+                    <div class="justify-center md:justify-end flex bg-black-custom2">
+                        <div class="flex text-end items-center justify-end md:justify-start me-5 mb-2 ">
+                            <img class="w-8 h-8 md:h-10 md:w-10 rounded-full me-2" src="./imagenes/logo-twitter.png"
+                                alt="logo-de-twitter">
+                            <h3 class="text-lg font-light text-white tracking-wide text-white tracking-tighter">
+                                @gustavoceratiok
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--REPRODUCTOR-->
+            <!--TITULO Y BOTONES REPRODUCTOR-->
+
+            <div class="bg-neutral-950">
+                <div class="my-5">
+                    <h1 class="text-white font-normal text-center md:text-start text-4xl w-full">Canciones del álbum
+                        Bocanada</h1>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-white p-2 text-4xl md:text-2xl"><small id="cant-canciones"
+                                class="text-2xl text-red-500 font-extralight"></small></h1>
+                    </div>
+                    <div class="flex">
+                        <img class="w-6 h-6 md:w-6 md:h-6 me-4 invert hover:invert-[.60] cursor-pointer transition ease-in-out delay-25 hover:scale-110"
+                            src="./imagenes/heart.png" alt="boton-favoritos">
+                        <img class="w-6 h-6 md:w-6 md:h-6 me-4 invert hover:invert-[.60] cursor-pointer transition ease-in-out delay-25 hover:scale-110"
+                            src="./imagenes/dots.png" alt="boton-compartir">
+                    </div>
+                </div>
+
+                <!--"TABLE HEAD REPRODUCTOR"-->
+
+                <div class="w-full flex justify-between p-3">
+                    <div class="flex -items-center">
+                        <div class="me-5">
+                            <h2 class="text-white">#</h2>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-sm">Titulo</h2>
+                        </div>
+                    </div>
+                    <div class="flex justify-between px-2">
+                        <div>
+                            <h2 class="text-white text-sm">Duración</h2>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-sm ms-12 lg:ms-2 md:w-full">Botones</h2>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-gray-600 mb-2">
+
+                <!--TABLE BODY REPRODUCTOR-->
+
+                <div id="display-data"></div>
+
+
+                <div class="my-5">
+                    <h1 class="text-white font-normal text-center md:text-start text-4xl w-full">Agregar y Eliminar
+                        canciones al álbum.</h1>
+                    <p id="alerta-sesion" class="text-red-500 text-lg">(Es necesario iniciar sesión)</p>
+                </div>
+
+                <form id="formulario-cancion" method="POST" class="flex flex-col mt-4 mb-4">
+
+                    <div class="grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-10">
+
+
+
+                        <div class="flex flex-col">
+                            <label class="text-slate-300 text-lg mb-1" for="id">Título de la canción</label>
+                            <input id="titulo" name="titulo"
+                                class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-black"
+                                type="text" placeholder="Ingresá el título de la canción" required>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label class="text-slate-300 text-lg mb-1" for="id">Duración de la canción <strong>(formato
+                                    00:00)</strong></label>
+                            <input id="duracion" name="duracion"
+                                class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-black"
+                                type="text" placeholder="Ingresá la duracion de la canción" required>
+                        </div>
+
+                    </div>
+
+                    <div class="grid mt-6 gap-5 items-center grid-cols-1 md:grid-cols-[90%_minmax(10%,_1fr)_100px]">
+
+                        <div class="cursor-pointer">
+                            <button type="submit"
+                                class="cursor-pointer flex items-center justify-center w-full text-xl font-light text-white bg-blue-700 border-2 border-none p-5 h-10 rounded-full transition ease-in-out delay-25 hover:bg-blue-900">Agregar
+                                canción</button>
+                        </div>
+
+                        <!-- ELIMINAR CANCIONES BOTON -->
+                        <div class="flex flex-col justify-center items-center">
+                            <button data-modal-target="staticModal" data-modal-toggle="staticModal"
+                                class="text-white rounded p-4 bg-red-500 me-4" type="submit">
+                                <img class="w-10 h-10 md:w-8 md:h-8 hover:invert-[.60] invert cursor-pointer transition ease-in-out delay-25 hover:scale-110"
+                                    src="./imagenes/tachito.png" alt="boton-compartir">
+                            </button>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+
+
+                <!-- MODAL CON EL FORMULARIO PARA ELIMINAR UNA CANCION DEL ALBUM -->
+                <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                    class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-neutral-700 rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
+                                <h3 class="text-xl font-semibold text-white dark:text-white">
+                                    Copiá el ID de la canción que querés eliminar.
+                                </h3>
+
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-hide="staticModal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <form id="formulario-eliminar-cancion" method="POST" class="flex flex-col px-10 mb-4">
+
+                                <label class="text-slate-300 text-sm mb-1" for="id">Id de la cancion</label>
+                                <input id="id" name="id"
+                                    class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
+                                    type="text" placeholder="Ingresá el id de la canción que querés eliminar" required>
+
+
+                                <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
+                                    <button type="submit"
+                                        class="cursor-pointer flex items-center justify-center w-full text-lg text-white bg-red-500 p-1 h-10 rounded-full transition ease-in-out delay-25 hover:scale-105">Eliminar
+                                        Canción</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <!--GALERIA DE IMAGENES DEL DISCO-->
+
+            <h1 class="text-white font-normal text-4xl w-full">Discografía</h1>
+            <div class="flex gap-x-2 pe-4 mt-10">
+                <img class="w-4/12 h-4/12 rounded" src="imagenes/amor-amarillo.webp" alt="arrow">
+                <img class="w-4/12 h-4/12 rounded" src="imagenes/fuerza-natural.webp" alt="arrow">
+                <img class="w-4/12 h-4/12 rounded" src="imagenes/ahi-vamos.webp" alt="arrow">
+            </div>  
+
+
+
+            <!-- VIDEO DE YOUTUBE DEL DISCO -->
+            <!-- <h1 class="text-white mt-10 font-normal text-4xl w-full">Youtube - disco entero</h1>
+            <div class="mt-5">
+                <iframe width="100%" height="400"
+                    src="https://www.youtube.com/embed/AqcwSp2OkIw?si=4BmTVX2i7cOv4RdA?playlist=O2mTJL2KPYE&loop=1&showinfo=0&modestbranding=1&autoplay=1&mute=1&rel=0&controls=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div> -->
+
+           
+             <!--FOOTER-->
+             <!-- <div>
+                <div class="mt-16 w-full fixed bottom-0 relative text-center flex w-full justify-center items-center p-5 me-40">
+                    <p class="text-white text-xl me-5">Curso Introductorio Fullstack - Proyecto disco Agustin Trezza</p>
+                    <img class="w-12 h-12 ms-5 rounded me-30" src="./imagenes/p5logo.jpeg" alt="logo-p5">
+                </div>
+            </div> -->
+
+
+        </section>
+
+
+
+
+    </div>
+
+            
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT COMPLEMENTARIO DE LA HOJA CON EVENTOS EN LA VISTA Y LA FUNCION PARA CERRAR SESIÓN-->
+
+    <script>
+
+        const user = JSON.parse(localStorage.getItem('userInfo'))
+        if (user) {
+            document.getElementById('2').style.display = "block";
+            document.getElementById('3').textContent = '';
+            document.getElementById('4').style.display = "block";
+            document.getElementById('nombre-usuario').textContent = user.nombre;
+            document.getElementById('alerta-sesion').style.display = "none";
+
+        } else {
+            document.getElementById('2').style.display = "none";
+            document.getElementById('3').textContent = 'Login'
+            document.getElementById('4').style.display = "none";
+        }
+
+        function cerrarSesion() {
+            console.log(user)
+            localStorage.removeItem('userInfo')
+            window.location.href = "../signin.html"
+        }
+
+        module.exports
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script type="module" src="./scripts/addCanciones.js" type="text/javascript"></script>
+</body>
+
+</html>

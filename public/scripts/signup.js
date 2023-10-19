@@ -3,7 +3,6 @@ const formulario = document.getElementById("formulario-register");
 formulario.addEventListener("submit", function (e) {
   e.preventDefault();
   getInputValues();
-  console.log("Entraaaa");
 });
 
 //RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
@@ -19,8 +18,8 @@ async function createUser(objectToSend) {
   try {
     await axios.post("/users/crearusuario", objectToSend);
     swal({
-      title: "¡Felicitaciones, gracias por registrarte!",
-      text: "Tu cuenta se creó de manera exitosa!",
+      title: "GRACIAS POR VER EL PROYECTO",
+      text: "Tú cuenta se creó de manera exitosa.",
       icon: "success",
       confirmButtonText: "Ok",
     }).then((isConfirm) => {

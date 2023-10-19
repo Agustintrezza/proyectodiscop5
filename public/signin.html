@@ -7,26 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <link href="./styles.css" rel="stylesheet">
-
-    <title>Login</title>
-
-    <style>
-        .sombra {
-            border: 1px solid rgb(124, 146, 212);
-            -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
-            box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 0px 0px 12px -1px rgba(120, 129, 255, 1);
-            -moz-box-shadow: 0px 0px 12px -1px rgb(179, 184, 252);
-            box-shadow: 0px 0px 12px -1px rgba(120, 129, 255, 1);
-        }
-    </style>
+    <title>Iniciar Sesión - P5 Proyecto Final - Agustin Trezza.</title>
 </head>
 
 <body class="bg-neutral-950 border-box">
 
     <!-- HEADER -->
-
     <nav class="bg-neutral-950 fixed w-full z-20 top-0 left-0 border-b border-gray-600 dark:border-gray-800">
         <div class=" w-full flex flex-wrap items-center justify-between mx-auto px-4 py-1 md:py-3">
             <a href="https://flowbite.com/" class="flex items-center">
@@ -80,11 +66,13 @@
 
 
             </div>
+
+            <!-- HEADER REDIRECCIONES -->
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-950 md:flex-row space-x-3 lg:space-x-8 md:mt-0 md:border-0 md:neutral-950 dark:bg-neutral-950 md:dark:bg-neutral-950 dark:border-gray-700">
                     <li class="bg-neutral-950">
-                        <a href="./index.html"
+                        <a href="./poratada.html"
                             class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded md:p-0 md:dark:text-white"
                             aria-current="page">Álbum</a>
                     </li>
@@ -98,13 +86,18 @@
                     </li>
                     <li class="bg-neutral-950">
                         <a href="./signin.html"
-                            class="block py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-violet-500 dark:hover:bg-gray-700 dark:hover:text-violet-500 md:dark:hover:bg-transparent dark:border-gray-700">Iniciar
+                            class="block text-xl py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-violet-500 dark:hover:bg-gray-700 dark:hover:text-violet-500 md:dark:hover:bg-transparent dark:border-gray-700">Iniciar
                             sesión</a>
                     </li>
                     <li class="bg-neutral-950">
                         <a href="./signup.html"
                             class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Crear
-                            sesión</a>
+                            cuenta</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./index.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Intro</a>
                     </li>
                 </ul>
             </div>
@@ -116,8 +109,7 @@
     </nav>
 
 
-    <!--FORMULARIO-->
-
+    <!--FORMULARIO PARA INICIAR SESIÓN-->
     <div class="grid h-full place-items-center px-2 md:px-7 bg-neutral-950 mt-[90px] md:mt-[80px]">
 
         <div class="mt-10 w-11/12 md:w-10/12 lg:w-10/12 xl:w-4/12 2xl:w-4/12 rounded-3xl pt-6 pb-6">
@@ -160,8 +152,7 @@
 
     </div>
 
-    <!--FOOTER-->
-    
+    <!--FOOTER-->   
     <div class="flex w-full justify-center items-center p-5 mt-10 fixed bottom-0">
         <p class="text-white text-lg">Curso Introductorio Fullstack - Plataforma 5 - Proyecto disco Agustin Trezza</p>
         <img class="w-12 h-12 ms-5 rounded" src="./imagenes/p5logo.jpeg" alt="logo-p5">

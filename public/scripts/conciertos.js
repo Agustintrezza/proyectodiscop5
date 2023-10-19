@@ -22,7 +22,7 @@ async function addConcierto2(objectToSend) {
 
   if(hola.length != 24) {
     swal({
-      title: "¡El ID debe contener 24 caracteres y ser de fromato ID!",
+      title: "EL ID DEBE CONTENER 24 CARACTERES Y SER FORMATO ID",
       text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
       icon: "warning",
       confirmButtonText: "Ok",
@@ -42,7 +42,7 @@ async function addConcierto2(objectToSend) {
           });
           swal({
             title: "MODIFICACIÓN EXITOSA",
-            text: "¡Modificaste la cantidad de tickets correctamente!",
+            text: "Modificaste la cantidad de tickets correctamente.",
             icon: "success",
           });
           setTimeout(() => {
@@ -53,13 +53,13 @@ async function addConcierto2(objectToSend) {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         if (!userInfo) {
           swal({
-            title: "¡DEBES INICIAR SESIÓN!",
-            text: "Para adquirir tickets o modificar el cupo de los conciertos es necesario iniciar sesión!",
+            title: "DEBES INICIAR SESIÓN",
+            text: "Para adquirir tickets o modificar el cupo de los conciertos es necesario iniciar sesión.",
             icon: "warning",
           });
         } else {
           swal({
-            title: "¡No existe ningún álbum con ese ID!",
+            title: "NO EXISTE NINGUN ÁLBUM CON ESE ID",
             text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
             icon: "warning",
             confirmButtonText: "Ok",
@@ -117,7 +117,7 @@ const mostrarData = async () => {
             <div class="flex p-4 m-auto cursor-pointer hover:bg-neutral-800">
 
                 <div class="flex flex-col p-1">
-                <img class="w-full h-40 rounded-t-lg" src="${imagen}"/>
+                <img class="w-full h-auto rounded-t-lg" src="${imagen}"/>
             
                     <p class="text-white text-4xl mt-2">${conjunto}</p>
                     <p class="text-white text-3xl">${estadio}</p>
@@ -130,12 +130,12 @@ const mostrarData = async () => {
                     <div class="flex items-center my-1">
                         <img class="w-4 h-4 md:w-5 md:h-5 me-3 invert" src="./imagenes/icono-ticket.png" alt="icono-calendario">
                         <div class="flex items-center">
-                        <p id="agot" class="text-white">tickets disponibles:  <p class="text-red-500 ms-2 text-xl"> ${ticketsdisponiblesFiltrados}</p></p>
+                        <p id="agot" class="text-white">tickets disponibles:  <p class="text-red-700 ms-2 text-lg"> ${ticketsdisponiblesFiltrados}</p></p>
 
                         </div>
                     </div>
                     
-                    <p class="text-white mt-1 mb-4">id: ${_id}</p>
+                    <p class="text-white mt-1 mb-4">id del concierto: ${_id}</p>
                   
                 </div>  
                 
@@ -164,14 +164,14 @@ function getInputValues() {
   return addConcierto(objectToSend);
 }
 
-// DESCUENTA LA CANTIDAD DE TICKETKS DEL CONCIERTO
+// DESCUENTA LA CANTIDAD DE TICKETS DEL CONCIERTO
 async function addConcierto(objectToSend) {
   console.log(objectToSend.id);
   const id = objectToSend.id;
   
   if(id.length != 24) {
     swal({
-      title: "¡El ID debe contener 24 caracteres y ser de fromato ID!",
+      title: "EL ID DEBE CONTENER 24 CARACTERES Y SER FORMATO ID",
       text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
       icon: "warning",
       confirmButtonText: "Ok",
@@ -189,19 +189,22 @@ async function addConcierto(objectToSend) {
         const data = await axios.put(`/conciertos/descontarcantidad/${id}`, objectToSend);
         if(data.data.ticketsdisponibles <= 0 ) {
           swal({
-            title: "TICKETS AGOTADOS",
-            text: "No quedan más cupos para este concierto",
+            title: "SE AGOTARON LOS TICKETS",
+            text: "No quedan más cupos para este concierto.",
             icon: "warning",
           });
+          setTimeout(() => {
+            location.reload();
+          }, 2000);
         } else {
           swal({
-            title: "FELICITACIONES",
-            text: "Adquiriste tus tickets correctamente",
+            title: "FELICITACIONES AQUIRISTE LOS TICKETS",
+            text: "Adquiriste tus tickets correctamente, verificá cómo se descontaron los cupos del concierto.",
             icon: "success",
           });
-          // setTimeout(() => {
-          //   location.reload();
-          // }, 2000);
+          setTimeout(() => {
+            location.reload();
+          }, 2000);
         }
         
       }
@@ -209,15 +212,14 @@ async function addConcierto(objectToSend) {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       if (!userInfo) {
         swal({
-          title: "¡Debes iniciar sesión!",
+          title: "DEBES INICIAR SESIÓN",
           text: "Para adquirir tickets o modificar cupos es necesario iniciar sesión",
           icon: "warning",
         });
       } else {
         swal({
-          title: "¡No existe ningún álbum con ese ID!",
-          text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
-          icon: "warning",
+          title: "REVISÁ LAS CANTIDADES O EL ID.",
+          text: "Revisá que la cantidad que estás ingresando no sea mayor a la disponible, tambíen asegurate que tu id sea el correcto.",
           confirmButtonText: "Ok",
         });
       }

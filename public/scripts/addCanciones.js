@@ -6,7 +6,7 @@ formulario.addEventListener("submit", function (e) {
   getInputValues();
 });
 
-// //RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
+//RECOLECCION Y ALMACENAMIENTO DE LOS VALORES DEL FORMULARIO
 function getInputValues() {
   const valoresFormulario = new FormData(formulario);
   const objectToSend = Object.fromEntries(valoresFormulario);
@@ -22,7 +22,7 @@ async function addCancion(objectToSend) {
     console.log(token);
     console.log(objectToSend);
 
-    if(objectToSend.duracion !== '^(?:([01]?\d|2[0-3]):([0-5]?\d):)?([0-5]?\d)$' ) {
+    if(objectToSend.duracion.length !== 5 ) {
       swal({
         title: "Formato inválido",
         text: "La duración debe contener 5 caracteres, '00:00'. Minutos y segudnos. Usando cero cuando sea necesario ",
@@ -37,7 +37,7 @@ async function addCancion(objectToSend) {
           },
         });
         swal({
-          title: "Success!",
+          title: "CANCIÓN AGREGADA CORRECTAMENTE",
           text: "Cancion agregada exitosamente al álbum",
           icon: "success",
         });
@@ -52,13 +52,13 @@ async function addCancion(objectToSend) {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     if (!userInfo) {
       swal({
-        title: "¡Debes iniciar sesión!",
-        text: "Para agregar canciones es necesario iniciar sesión!",
+        title: "DEBES INICIAR SESIÓN",
+        text: "Para agregar canciones es necesario iniciar sesión.",
         icon: "warning",
       });
     } else {
       swal({
-        title: "¡Revisá bien los datos ingresados!",
+        title: "REVISÁ BIEN LOS DATOS INGRESADOS",
         text: "Todos los campos son requeridos, revisá que no haya errores.",
         icon: "warning",
         confirmButtonText: "Ok",
@@ -165,7 +165,7 @@ async function eliminarCancion(id) {
 
   if(id.length != 24) {
     swal({
-      title: "¡El ID debe contener 24 caracteres y ser de fromato ID!",
+      title: "EL ID DEBE CONTENER 24 CARACTERES Y SER FORMATO ID",
       text: "Revisá tu id, no existe ningún álbum en nuestro sistema con ese ID.",
       icon: "warning",
       confirmButtonText: "Ok",
@@ -183,7 +183,7 @@ async function eliminarCancion(id) {
           },
         });
         swal({
-          title: "'¡La canción fue eliminada correctamente del álbum!",
+          title: "LA CANCIÓN DE ELIMINO CORRECTAMENTE",
           icon: "success",
         });
         setTimeout(() => {
@@ -195,14 +195,14 @@ async function eliminarCancion(id) {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         if (!userInfo) {
           swal({
-            title: "¡Debes iniciar sesión!",
+            title: "DEBES INICIAR SERSIÓN",
             text: "Tienes que iniciar sesión para eliminar canciones.",
             icon: "warning",
             confirmButtonText: "Ok",
           });
         } else {
           swal({
-            title: "¡No existe ningúna canción con ese ID!",
+            title: "NO EXISTE NINGUNA CANCIÓN CON ESE ID",
             text: "Revisá el id, no existe ningúna canción en este disco con ese ID.",
             icon: "warning",
             confirmButtonText: "Ok",

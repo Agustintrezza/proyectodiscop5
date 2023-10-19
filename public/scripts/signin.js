@@ -20,8 +20,8 @@ async function loginUser(objectToSend) {
     const userInfo = data.user[0];
     localStorage.setItem("userInfo", JSON.stringify(userInfo));
     swal({
-      title: "¡Felicitaciones y Bienvenidx",
-      text: "Iniciaste sesión correctamente! De esta manera podrás hacer uso de las funcionalidades de la aplicación.",
+      title: "INICIASTE TU SESIÓN CORRECTAMENTE",
+      text: "De esta manera podrás hacer uso de las funcionalidades de la aplicación.",
       icon: "success",
       confirmButtonText: "Ok",
     }).then((isConfirm) => {
@@ -29,8 +29,8 @@ async function loginUser(objectToSend) {
     });
   } catch (error) {
     swal({
-      title: "No es posible iniciar sesión",
-      text: "El email ingresado o el password no son válidos!",
+      title: "NO ES POSIBLE INICIAR SESIÓN",
+      text: "El email o el password ingresados no son válidos.",
       icon: "warning",
       confirmButtonText: "Ok",
     });

@@ -7,13 +7,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./styles.css" rel="stylesheet">
-    <title>Agregar Tours</title>
+    <title>Conciertos - P5 Proyecto Final - Agustin Trezza.</title>
 </head>
 
 <body class="bg-neutral-950 border-box mt-[80px] md:mt-[80px]">
 
     <!-- HEADER -->
-
     <nav class="bg-neutral-950 fixed w-full z-20 top-0 left-0 border-b border-gray-600 dark:border-gray-800">
         <div class=" w-full flex flex-wrap items-center justify-between mx-auto px-4 py-1 md:py-3">
             <a href="https://flowbite.com/" class="flex items-center">
@@ -67,11 +66,13 @@
 
 
             </div>
+
+            <!-- HEADER REDIRECCIONES -->
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-neutral-950 md:flex-row space-x-3 lg:space-x-8 md:mt-0 md:border-0 md:neutral-950 dark:bg-neutral-950 md:dark:bg-neutral-950 dark:border-gray-700">
                     <li class="bg-neutral-950">
-                        <a href="./index.html"
+                        <a href="./portada.html"
                             class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded md:p-0"
                             aria-current="page">Álbum</a>
                     </li>
@@ -81,7 +82,7 @@
                     </li>
                     <li class="bg-neutral-950">
                         <a href="./tours.html"
-                            class="block py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-violet-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tickets</a>
+                            class="block text-xl py-2 pl-3 pr-4 text-violet-500 hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-violet-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Tickets</a>
                     </li>
                     <li class="bg-neutral-950">
                         <a href="./signin.html"
@@ -91,7 +92,12 @@
                     <li class="bg-neutral-950">
                         <a href="./signup.html"
                             class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Crear
-                            sesión</a>
+                            cuenta</a>
+                    </li>
+                    <li class="bg-neutral-950">
+                        <a href="./index.html"
+                            class="block py-2 pl-3 pr-4 text-white hover:text-violet-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-violet-400 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Intro</a>
                     </li>
                 </ul>
             </div>
@@ -107,10 +113,9 @@
 
 
         <!--SIDENAV-->
-
         <div class="grid xl:grid-cols-5 xl:h-full gap-3 p-2.5 gap-2">
 
-            <section class="bg-neutral-900 h-full rounded p-2 hidden xl:block">
+            <section class="bg-neutral-900 rounded p-2 hidden xl:block">
 
                 <div
                     class="flex items-center mb-1 hover:scale-105 flex bg-gradient-to-r from-violet-600 to-transparent transition ease-in-out delay-25 hover:bg-gray-700 hover:border-r-2 border-r-sky-900 p-1.5 cursor-pointer rounded">
@@ -133,7 +138,7 @@
                         <img class="w-5 h-5 rounded me-2 invert" src="./imagenes/cd.png" alt="img-bocanada-disco">
                     </div>
                     <div class="p-1">
-                        <a class="" href="./index.html">
+                        <a class="" href="./portada.html">
                             <h2
                                 class="text-slate-200 text-md transition-all transition ease-in-out delay-400 duration-300 hover:underline">
                                 album <span class="fecha-album-listado"></span></h2>
@@ -286,9 +291,9 @@
             <section class="bg-neutral-950 h-screen xl:col-span-4 rounded-lg">
 
 
-                <div class="flex flex-col md:flex-row justify-between items-start mt-5">
+                <div class="flex flex-col md:flex-row justify-between gap-7 items-start">
                     <div class="">
-                        <h1 class="text-white text-center md:text-start font-normal text-5xl w-full mb-3 md:mb-0">Tickets disponibles para conciertos.</h1>
+                        <h1 class="font-bold text-center bg-gradient-to-r from-blue-700 to-violet-500 bg-clip-text text-transparent md:text-start text-6xl w-full mb-3 md:mb-0">Tickets disponibles para conciertos.</h1>
                         <h1 class="text-white p-2 text-2xl md:text-lg text-center md:text-start">Seleccióna el ID del concierto, modificá los cupos o adquirí tus tickets.
                             <small></small></h1>
                     </div>
@@ -297,12 +302,12 @@
                         <div class="flex gap-4">
                             <div>
                                 <button id="1" data-modal-target="staticModal" data-modal-toggle="staticModal"
-                                    class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xl md:text-xl text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡MODIFICAR
+                                    class="boton-comprar-tickets px-1 py-2 md:px-8 md:py-2 font-bold text-xl md:text-lg text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡MODIFICAR
                                     CUPOS!</button>
                             </div>
                             <div>
                                 <button id="2" data-modal-target="staticModal1" data-modal-toggle="staticModal1"
-                                    class="boton-comprar-tickets px-1 py-2 md:px-2 md:py-3 font-bold text-xl md:text-xl text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR
+                                    class="boton-comprar-tickets px-1 py-2 md:px-8 md:py-2 font-bold text-xl md:text-lg text-violet-900 hover:white text-sm bg-yellow-400 rounded transition ease-in-out delay-25 hover:scale-105">¡COMPRAR
                                     TICKETS!</button>
                                 <p id="alerta-sesion" class="text-white"></p>
                             </div>
@@ -319,7 +324,7 @@
 
                     <div class="grid mt-5 grid-cols-1 md:grid-cols-3" id="display-data-conciertos"></div>
 
-                    <!-- Modal -->
+                    <!-- MODAL CON EL FOMRULARIO PARA MODIFICAR EL CUPO DE UN CONCIERTO -->
 
                     <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
                         class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -339,20 +344,19 @@
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                 stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                                         </svg>
-                                        <span class="sr-only">Close modal</span>
+                                        <span class="sr-only">Cerrar modal</span>
                                     </button>
                                 </div>
                                 <!-- Modal body -->
                                 <form id="formulario-tickets" method="POST" class="flex flex-col px-6 mb-3">
 
-                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">Ingresá la cantidad de
-                                        tickets para el concierto.</label>
+                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">¿Cuántos cupos querés asignar?</label> 
                                     <input id="cantidad" name="cantidad"
                                         class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
-                                        type="Number" placeholder="Ingresá la cantidad de tickets que deseas asignar"
+                                        type="Number" placeholder="Ingresá la cantidad de lugar que deseas asignar"
                                         required>
 
-                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">Id del álbum</label>
+                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">Ingresá el id del concierto</label>
                                     <input id="id" name="id"
                                         class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
                                         type="text" placeholder="Ingresá el id del concierto" required>
@@ -366,6 +370,9 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- MODAL CON EL FOMRULARIO PARA ADQUIRIR TICKETS DE UN CONCIERTO -->
 
                     <div id="staticModal1" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
                         class=" fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -393,16 +400,15 @@
 
                                 <form id="formulario-descuentocantidades" method="POST" class="flex flex-col px-6 mb-3">
 
-                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">Id del álbum</label>
+                                    <label class="text-white text-md mt-3 mb-1 me-2" for="cantidad">¿Cuántos tickets querés adquirir?</label>
+                                    <input id="cantidad" name="cantidad"
+                                        class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
+                                        min="0" type="number" placeholder="Ingresá la cantidad de tickets que buscás" required>
+
+                                    <label class="text-white text-md mt-3 mb-1 me-2" for="id">Id del concierto</label>
                                     <input id="id" name="id"
                                         class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
                                         type="text" placeholder="Ingresá el id del concierto" required>
-
-                                    <label class="text-white text-md mt-3 mb-1 me-2" for="cantidad">Ingresá la cantidad
-                                        de tickets que deseas adquirir.</label>
-                                    <input id="cantidad" name="cantidad"
-                                        class="bg-neutral-900 rounded-md p-1.5 text-white text-sm h-10 placeholder:text-sm focus-visible:outline-none"
-                                        min="0" type="number" placeholder="Ingresá la cantidad de tickets" required>
 
                                     <div class="flex justify-center items-center mt-6 mb-10 cursor-pointer">
                                         <button type="submit"
@@ -420,16 +426,15 @@
 
     </div>
 
+    </section>
+    </div>
     <!--FOOTER-->
-    <!-- <div>
-        <div class="mt-16 w-full relative text-center flex w-full justify-center items-center p-5 me-40">
+    <!-- <div class="hidden lg:block">
+        <div class="mt-16 w-full text-center flex w-full justify-center items-center p-5 me-40">
             <p class="text-white text-xl me-5">Curso Introductorio Fullstack - Proyecto disco Agustin Trezza</p>
             <img class="w-12 h-12 ms-5 rounded me-30" src="./imagenes/p5logo.jpeg" alt="logo-p5">
         </div>
     </div> -->
-
-    </section>
-    </div>
 </div>
 
     <script>
